@@ -7,21 +7,21 @@
   font-style: normal;
 }
 
-/* line 34, ../sass/style.scss */
+/* line 50, ../sass/style.scss */
 *, *:before, *:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* line 38, ../sass/style.scss */
+/* line 54, ../sass/style.scss */
 html, body {
   width: 100%;
   height: 100%;
   background: black;
 }
 
-/* line 46, ../sass/style.scss */
+/* line 62, ../sass/style.scss */
 body {
   font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   color: white;
@@ -29,51 +29,56 @@ body {
   text-align: center;
 }
 
-/* line 53, ../sass/style.scss */
+/* line 69, ../sass/style.scss */
 a {
+  -webkit-transition: color 0.5s ease-in-out;
+  -moz-transition: color 0.5s ease-in-out;
+  -o-transition: color 0.5s ease-in-out;
+  -ms-transition: color 0.5s ease-in-out;
+  transition: color 0.5s ease-in-out;
   color: white;
   text-decoration: none;
 }
 
-/* line 58, ../sass/style.scss */
+/* line 75, ../sass/style.scss */
 a:hover {
   color: red;
 }
 
-/* line 62, ../sass/style.scss */
+/* line 79, ../sass/style.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: "br", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   line-height: 1;
 }
 
-/* line 68, ../sass/style.scss */
+/* line 85, ../sass/style.scss */
 h1 {
   font-size: 7em;
 }
 
-/* line 69, ../sass/style.scss */
+/* line 86, ../sass/style.scss */
 h2 {
   font-size: 5.5em;
 }
 
-/* line 70, ../sass/style.scss */
+/* line 87, ../sass/style.scss */
 h3 {
   font-size: 2em;
 }
 
-/* line 71, ../sass/style.scss */
+/* line 88, ../sass/style.scss */
 h4 {
   font-size: 1em;
 }
 
-/* line 73, ../sass/style.scss */
+/* line 90, ../sass/style.scss */
 p {
   line-height: 1.5;
   text-align: justify;
 }
 
-/* line 79, ../sass/style.scss */
+/* line 96, ../sass/style.scss */
 .page {
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -84,7 +89,7 @@ p {
   position: relative;
 }
 
-/* line 89, ../sass/style.scss */
+/* line 106, ../sass/style.scss */
 .copy {
   position: relative;
   top: 50%;
@@ -93,7 +98,7 @@ p {
   transform: translateY(-50%);
 }
 
-/* line 93, ../sass/style.scss */
+/* line 110, ../sass/style.scss */
 .video {
   position: absolute;
   top: 0;
@@ -103,54 +108,76 @@ p {
   display: none;
 }
 
-/* line 102, ../sass/style.scss */
+/* line 119, ../sass/style.scss */
 .button {
   display: block;
   cursor: pointer;
 }
 
-/* line 107, ../sass/style.scss */
+/* line 124, ../sass/style.scss */
+#social-list {
+  margin: 2em 0;
+}
+
+/* line 128, ../sass/style.scss */
+#social-list li {
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out;
+  -ms-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+  display: inline;
+  opacity: 0.5;
+  padding: 1em;
+}
+
+/* line 135, ../sass/style.scss */
+#social-list li:hover {
+  opacity: 1;
+}
+
+/* line 139, ../sass/style.scss */
 #demo-reel {
   background: url(../img/demo-reel.jpg) no-repeat center center fixed;
 }
 
-/* line 111, ../sass/style.scss */
+/* line 143, ../sass/style.scss */
 #liquid-rising {
   background: url(../img/liquid-rising.jpg) no-repeat center center fixed;
 }
 
-/* line 115, ../sass/style.scss */
+/* line 147, ../sass/style.scss */
 #adventure-time-krukar {
   background: url(../img/adventure-time-krukar.jpg) no-repeat center center fixed;
 }
 
-/* line 119, ../sass/style.scss */
+/* line 151, ../sass/style.scss */
 #wd40 {
   background: url(../img/wd40.jpg) no-repeat center center fixed;
 }
 
-/* line 123, ../sass/style.scss */
+/* line 155, ../sass/style.scss */
 #slim-twig {
   background: url(../img/slim-twig.jpg) no-repeat center center fixed;
 }
 
-/* line 127, ../sass/style.scss */
+/* line 159, ../sass/style.scss */
 #july-talk {
   background: url(../img/july-talk.jpg) no-repeat center center fixed;
 }
 
-/* line 131, ../sass/style.scss */
+/* line 163, ../sass/style.scss */
 #dota-1000 {
   background: url(../img/dota-1000.jpg) no-repeat center center fixed;
 }
 
-/* line 136, ../sass/style.scss */
+/* line 168, ../sass/style.scss */
 ::selection {
   background: red;
   /* Safari */
 }
 
-/* line 139, ../sass/style.scss */
+/* line 171, ../sass/style.scss */
 ::-moz-selection {
   background: red;
   /* Firefox */
