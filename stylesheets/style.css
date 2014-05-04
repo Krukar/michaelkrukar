@@ -1,0 +1,157 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700);
+@font-face {
+  font-family: 'br';
+  src: url("../fonts/br-medium-webfont.eot");
+  src: url("../fonts/br-medium-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/br-medium-webfont.woff") format("woff"), url("../fonts/br-medium-webfont.ttf") format("truetype"), url("../fonts/br-medium-webfont.svg#brandon_grotesquemedium") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 34, ../sass/style.scss */
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 38, ../sass/style.scss */
+html, body {
+  width: 100%;
+  height: 100%;
+  background: black;
+}
+
+/* line 46, ../sass/style.scss */
+body {
+  font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  color: white;
+  font-size: 16px;
+  text-align: center;
+}
+
+/* line 53, ../sass/style.scss */
+a {
+  color: white;
+  text-decoration: none;
+}
+
+/* line 58, ../sass/style.scss */
+a:hover {
+  color: red;
+}
+
+/* line 62, ../sass/style.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "br", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+/* line 68, ../sass/style.scss */
+h1 {
+  font-size: 7em;
+}
+
+/* line 69, ../sass/style.scss */
+h2 {
+  font-size: 5.5em;
+}
+
+/* line 70, ../sass/style.scss */
+h3 {
+  font-size: 2em;
+}
+
+/* line 71, ../sass/style.scss */
+h4 {
+  font-size: 1em;
+}
+
+/* line 73, ../sass/style.scss */
+p {
+  line-height: 1.5;
+  text-align: justify;
+}
+
+/* line 79, ../sass/style.scss */
+.page {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* line 89, ../sass/style.scss */
+.copy {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/* line 93, ../sass/style.scss */
+.video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+/* line 102, ../sass/style.scss */
+.button {
+  display: block;
+  cursor: pointer;
+}
+
+/* line 107, ../sass/style.scss */
+#demo-reel {
+  background: url(../img/demo-reel.jpg) no-repeat center center fixed;
+}
+
+/* line 111, ../sass/style.scss */
+#liquid-rising {
+  background: url(../img/liquid-rising.jpg) no-repeat center center fixed;
+}
+
+/* line 115, ../sass/style.scss */
+#adventure-time-krukar {
+  background: url(../img/adventure-time-krukar.jpg) no-repeat center center fixed;
+}
+
+/* line 119, ../sass/style.scss */
+#wd40 {
+  background: url(../img/wd40.jpg) no-repeat center center fixed;
+}
+
+/* line 123, ../sass/style.scss */
+#slim-twig {
+  background: url(../img/slim-twig.jpg) no-repeat center center fixed;
+}
+
+/* line 127, ../sass/style.scss */
+#july-talk {
+  background: url(../img/july-talk.jpg) no-repeat center center fixed;
+}
+
+/* line 131, ../sass/style.scss */
+#dota-1000 {
+  background: url(../img/dota-1000.jpg) no-repeat center center fixed;
+}
+
+/* line 136, ../sass/style.scss */
+::selection {
+  background: red;
+  /* Safari */
+}
+
+/* line 139, ../sass/style.scss */
+::-moz-selection {
+  background: red;
+  /* Firefox */
+}

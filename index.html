@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>MichaelKrukar.com - Toronto New Media Artist</title>
+	<link rel="stylesheet" type="text/css" href="stylesheets/cssreset-min.css">
+	<link href="stylesheets/style.css" media="screen, projection" rel="stylesheet" type="text/css" />
+	<script src="js/jquery-2.1.1.min.js" type="text/javascript"></script>
+	<script src="js/jquery.panelSnap.js" type="text/javascript"></script>	
+	<script src="http://www.youtube.com/iframe_api" type="text/javascript"></script>
+	<script type="text/javascript">
+	//Create videos
+	var playerDemoReel, playerLiquidRising, playerWD40, playerJulyTalk, playerDota1000;
+
+	//Load videos once the API loads
+	function onYouTubeIframeAPIReady() {
+		playerDemoReel = new YT.Player('playerDemoReel');
+		playerLiquidRising = new YT.Player('playerLiquidRising');
+		playerWD40 = new YT.Player('playerWD40');
+		playerJulyTalk = new YT.Player('playerJulyTalk');
+		playerDota1000 = new YT.Player('playerDota1000');
+	}
+
+</script>	
+</head>
+<body>
+	
+	<div id="demo-reel" class="page">
+		<div class="copy">
+			<h1>MichaelKrukar.com</h1>
+			<h2>Toronto New Media Artist</h2>
+			<a id="play-demo-reel" class="button"><h3>Watch Demo Reel</h3></a>
+		</div>
+		<iframe class="video" src="//www.youtube.com/embed/ig_GsGkzTbI?enablejsapi=1&list=PLMD48AgZs6gIktp42eNnbmrr88p6GYy3o&rel=0&showinfo=0" frameborder="0" allowfullscreen id="playerDemoReel"></iframe>
+	</div>
+
+	<div id="liquid-rising" class="page">
+		<div class="copy">
+			<h1>Liquid Rising</h1>
+			<h2>E-Sports Documentary</h2>
+			<a id="play-liquid-rising" class="button"><h3>Watch Liquid Rising</h3></a>
+		</div>
+		<iframe class="video" src="//www.youtube.com/embed/_R2Ep6L5gIA?enablejsapi=1&list=PLMD48AgZs6gIktp42eNnbmrr88p6GYy3o&rel=0&showinfo=0" frameborder="0" allowfullscreen id="playerLiquidRising"></iframe>
+	</div>
+
+	<div id="adventure-time-krukar" class="page">
+		<div class="copy">
+			<h1>Adventure Time Krukar</h1>
+			<h2>Digital Art</h2>
+			<a href="img/adventure-time-krukar.png" target="_blank"><h3>View High Res</h3></a>
+		</div>
+	</div>
+
+	<div id="wd40" class="page">
+		<div class="copy">
+			<h1>WD40 The Specialists</h1>
+			<h2>TV Commercial</h2>
+			<a id="play-wd40" class="button"><h3>Watch Commercial</h3></a>
+		</div>
+		<iframe class="video" src="//www.youtube.com/embed/r6VDYO5MSDQ?enablejsapi=1&list=PLMD48AgZs6gIktp42eNnbmrr88p6GYy3o&rel=0&showinfo=0" frameborder="0" allowfullscreen id="playerWD40"></iframe>
+	</div>
+	
+	<div id="slim-twig" class="page">
+		<div class="copy">
+			<h1>Slim Twig @ The Great Hall</h1>
+			<h2>Photography</h2>
+			<a href="https://flic.kr/s/aHsjCkeT16" target="_blank"><h3>View Photo Gallery</h3></a>
+		</div>
+	</div>
+
+	<div id="july-talk" class="page">
+		<div class="copy">
+			<h1>July Talk - Guns + Ammunittion</h1>
+			<h2>Live Music Video</h2>
+			<a id="play-july-talk" class="button"><h3>Watch Music Video</h3></a>
+		</div>
+		<iframe class="video" src="//www.youtube.com/embed/5KT8owLfcsU?enablejsapi=1&list=PLMD48AgZs6gIktp42eNnbmrr88p6GYy3o&rel=0&showinfo=0" frameborder="0" allowfullscreen id="playerJulyTalk"></iframe>
+	</div>
+
+	<div id="dota-1000" class="page">
+		<div class="copy">
+			<h1>Turn of the Tide</h1>
+			<h2>Dota 2 1000 FPS</h2>
+			<a id="play-dota-1000" class="button"><h3>Watch Video</h3></a>
+		</div>
+		<iframe class="video" src="//www.youtube.com/embed/mahHF8dIeVg?enablejsapi=1&list=PLMD48AgZs6gIktp42eNnbmrr88p6GYy3o&rel=0&showinfo=0" frameborder="0" allowfullscreen id="playerDota1000"></iframe>
+	</div>
+
+	<div id="contact" class="page">
+		<div class="copy">
+			<h3>Email</h3>
+			<h3>Social Media</h3>
+			<h3>View Site on GitHub</h3>
+			<p>As we got further and further away, it [the Earth] diminished in size. Finally it shrank to the size of a marble, the most beautiful you can imagine. That beautiful, warm, living object looked so fragile, so delicate, that if you touched it with a finger it would crumble and fall apart. Seeing this has to change a man.</p>
+			<p>The regret on our side is, they used to say years ago, we are reading about you in science class. Now they say, we are reading about you in history class.</p>
+		</div>
+	</div>
+	
+	<script>
+		$(function() { 
+
+			//Panel Snap
+			//onSnapFinish on body is trigger everytime it snaps, this will pause and hide all videos just to be safe
+			$('body').panelSnap({
+				onSnapFinish: function($target) {
+					//Demo Reel
+					playerDemoReel.pauseVideo();
+					$('#playerDemoReel').hide();
+					//Liquid Rising
+					playerLiquidRising.pauseVideo();
+					$('#playerLiquidRising').hide();
+					//WD40
+					playerWD40.pauseVideo();
+					$('#playerWD40').hide();
+					//July Talk
+					playerJulyTalk.pauseVideo();
+					$('#playerJulyTalk').hide();
+					//Dota 1000
+					playerDota1000.pauseVideo();
+					$('#playerDota1000').hide();
+				}
+			});
+
+			//Play Demo Reel
+			// I don't like that it writes the text every time
+			$("#play-demo-reel").click(function () {
+				playerDemoReel.playVideo();
+				$('#playerDemoReel').show();
+				$("#play-demo-reel h3").text("Resume");
+			});
+
+			//Play Liquid Rising
+			$("#play-liquid-rising").click(function () {
+				playerLiquidRising.playVideo();
+				$('#playerLiquidRising').show();
+				$("#play-liquid-rising h3").text("Resume");
+			});
+
+			//Play WD40
+			$("#play-wd40").click(function () {
+				playerWD40.playVideo();
+				$('#playerWD40').show();
+				$("#play-wd40 h3").text("Resume");
+			});
+			//Play July Talk
+			$("#play-july-talk").click(function () {
+				playerJulyTalk.playVideo();
+				$('#playerJulyTalk').show();
+				$("#play-july-talk h3").text("Resume");
+			});
+			//Play Dota 1000
+			$("#play-dota-1000").click(function () {
+				playerDota1000.playVideo();
+				$('#playerDota1000').show();
+				$("#play-dota-1000 h3").text("Resume");
+			});
+
+		});
+</script>
+</body>
+</html>
