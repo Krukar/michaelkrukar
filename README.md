@@ -1,6 +1,6 @@
 # MichaelKrukar.com Redesign May 2014
 
-Patch Notes May 3rd 2014
+## Patch Notes May 3rd 2014
 
 To Do
 
@@ -45,9 +45,7 @@ Load time
 Requests
 63
 
-##
-
-Patch Notes May 10 2014
+## Patch Notes May 10 2014
 
 To Do
 
