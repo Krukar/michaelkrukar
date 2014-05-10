@@ -4,7 +4,6 @@ Copyright 2014 Yahoo! Inc. All rights reserved.
 Licensed under the BSD License.
 http://yuilibrary.com/license/
 */
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700);
 /* line 8, ../sass/style.scss */
 html {
   color: #000;
@@ -84,42 +83,36 @@ legend {
   color: #000;
 }
 
-/* line 8, ../sass/style.scss */
-#yui3-css-stamp.cssreset {
-  display: none;
-}
-
 @font-face {
   font-family: 'br';
-  src: url("../fonts/br-medium-webfont.eot");
-  src: url("../fonts/br-medium-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/br-medium-webfont.woff") format("woff"), url("../fonts/br-medium-webfont.ttf") format("truetype"), url("../fonts/br-medium-webfont.svg#brandon_grotesquemedium") format("svg");
+  src: url("../fonts/br-medium-webfont.woff");
   font-weight: normal;
   font-style: normal;
 }
 
-/* line 59, ../sass/style.scss */
+/* line 52, ../sass/style.scss */
 *, *:before, *:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* line 63, ../sass/style.scss */
+/* line 56, ../sass/style.scss */
 html, body {
   width: 100%;
   height: 100%;
   background: black;
 }
 
-/* line 71, ../sass/style.scss */
+/* line 64, ../sass/style.scss */
 body {
-  font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   color: white;
   font-size: 16px;
   text-align: center;
 }
 
-/* line 78, ../sass/style.scss */
+/* line 71, ../sass/style.scss */
 a {
   -webkit-transition: color 0.5s ease-in-out;
   -moz-transition: color 0.5s ease-in-out;
@@ -130,45 +123,29 @@ a {
   text-decoration: none;
 }
 
-/* line 84, ../sass/style.scss */
+/* line 77, ../sass/style.scss */
 a:hover {
   color: red;
 }
 
-/* line 88, ../sass/style.scss */
+/* line 81, ../sass/style.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: "br", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   line-height: 1;
 }
 
-/* line 94, ../sass/style.scss */
+/* line 87, ../sass/style.scss */
 h1 {
   font-size: 7em;
 }
 
-/* line 95, ../sass/style.scss */
+/* line 88, ../sass/style.scss */
 h2 {
   font-size: 5.5em;
 }
 
-/* line 96, ../sass/style.scss */
-h3 {
-  font-size: 2em;
-}
-
-/* line 97, ../sass/style.scss */
-h4 {
-  font-size: 1em;
-}
-
-/* line 99, ../sass/style.scss */
-p {
-  line-height: 1.5;
-  text-align: justify;
-}
-
-/* line 105, ../sass/style.scss */
+/* line 92, ../sass/style.scss */
 .page {
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -177,10 +154,11 @@ p {
   width: 100%;
   min-width: 1900px;
   height: 100%;
+  min-height: 600px;
   position: relative;
 }
 
-/* line 116, ../sass/style.scss */
+/* line 104, ../sass/style.scss */
 .copy {
   position: relative;
   top: 50%;
@@ -189,7 +167,7 @@ p {
   transform: translateY(-50%);
 }
 
-/* line 120, ../sass/style.scss */
+/* line 108, ../sass/style.scss */
 .video {
   position: absolute;
   top: 0;
@@ -199,7 +177,7 @@ p {
   display: none;
 }
 
-/* line 129, ../sass/style.scss */
+/* line 117, ../sass/style.scss */
 .button {
   -webkit-transition: opacity 0.5s ease-in-out;
   -moz-transition: opacity 0.5s ease-in-out;
@@ -212,18 +190,18 @@ p {
   filter: alpha(opacity=50);
 }
 
-/* line 137, ../sass/style.scss */
+/* line 125, ../sass/style.scss */
 .button:hover {
   opacity: 1;
   filter: alpha(opacity=100);
 }
 
-/* line 142, ../sass/style.scss */
+/* line 130, ../sass/style.scss */
 #social-list {
   margin: 2em 0;
 }
 
-/* line 146, ../sass/style.scss */
+/* line 134, ../sass/style.scss */
 #social-list li {
   -webkit-transition: opacity 0.5s ease-in-out;
   -moz-transition: opacity 0.5s ease-in-out;
@@ -235,53 +213,53 @@ p {
   padding: 1em;
 }
 
-/* line 153, ../sass/style.scss */
+/* line 141, ../sass/style.scss */
 #social-list li:hover {
   opacity: 1;
 }
 
-/* line 157, ../sass/style.scss */
+/* line 145, ../sass/style.scss */
 #demo-reel {
   background: url(../img/demo-reel.jpg) no-repeat center center fixed;
 }
 
-/* line 161, ../sass/style.scss */
+/* line 149, ../sass/style.scss */
 #liquid-rising {
   background: url(../img/liquid-rising.jpg) no-repeat center center fixed;
 }
 
-/* line 165, ../sass/style.scss */
+/* line 153, ../sass/style.scss */
 #adventure-time-krukar {
   background: url(../img/adventure-time-krukar.jpg) no-repeat center center fixed;
 }
 
-/* line 169, ../sass/style.scss */
+/* line 157, ../sass/style.scss */
 #wd40 {
   background: url(../img/wd40.jpg) no-repeat center center fixed;
 }
 
-/* line 173, ../sass/style.scss */
+/* line 161, ../sass/style.scss */
 #slim-twig {
   background: url(../img/slim-twig.jpg) no-repeat center center fixed;
 }
 
-/* line 177, ../sass/style.scss */
+/* line 165, ../sass/style.scss */
 #july-talk {
   background: url(../img/july-talk.jpg) no-repeat center center fixed;
 }
 
-/* line 181, ../sass/style.scss */
+/* line 169, ../sass/style.scss */
 #dota-1000 {
   background: url(../img/dota-1000.jpg) no-repeat center center fixed;
 }
 
-/* line 186, ../sass/style.scss */
+/* line 174, ../sass/style.scss */
 ::selection {
   background: red;
   /* Safari */
 }
 
-/* line 189, ../sass/style.scss */
+/* line 177, ../sass/style.scss */
 ::-moz-selection {
   background: red;
   /* Firefox */
