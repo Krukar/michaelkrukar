@@ -66,3 +66,13 @@ Load time
 
 Requests
 23
+
+## Patch Notes May 13 2014
+
+Using two pieces of clothing, my favorite hoodie and favorite black shirt, I created my 2 official colors
+
+$krukar-black: #222222;
+Pantone Coated Neutral Black C
+
+$krukar-red: #ea002a;
+Pantone Coated 185 C

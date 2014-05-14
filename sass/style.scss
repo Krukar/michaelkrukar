@@ -10,8 +10,8 @@ html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre
 // MichaelKrukar.com CSS
 
 // Global Variables
-$krukar-black: #000;
-$krukar-red: #FF0000;
+$krukar-black: #222222;
+$krukar-red: #ea002a;
 $krukar-white: #FFF;
 
 @font-face {
@@ -80,12 +80,16 @@ a:hover{
 
 #{headings()} { 
 	font-family: "br", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-	text-transform: uppercase;
 	line-height:1;
+	word-break: normal;
 }
 
 h1{font-size:7em;}
 h2{font-size:5.5em;}
+
+.red{
+	color:$krukar-red;
+}
 
 
 // Portfolio Pieces CSS
@@ -95,9 +99,8 @@ h2{font-size:5.5em;}
 	-o-background-size: cover;
 	background-size: cover;
 	width:100%;
-	min-width:1900px;
 	height:100%;
-	min-height:600px;
+	min-height:500px;
 	position:relative;
 }
 
@@ -177,3 +180,51 @@ h2{font-size:5.5em;}
 ::-moz-selection {
 	background: $krukar-red; /* Firefox */
 }
+
+// Media Queries
+
+// Small
+@media (max-width: 640px) {
+	.page{min-height:250px;}
+	h1{font-size:3em;}
+	h2{font-size:2em;}
+}
+
+// Medium 641px, 1024px
+@media (min-width:641px) and (max-width: 1024px) {
+	.page{min-height:300px;}
+	h1{font-size:5em;}
+	h2{font-size:3em;}
+}
+
+// Debug
+#debug{
+	position:fixed;
+	top:10px;
+	left:10px;
+	z-index:999;
+	color:red;
+}
+
+.small, .medium, .large{display:none;}
+
+@media (max-width: 640px) {
+	.medium, .large, .xlarge{
+		display:none;
+	}
+	.small{display:block;}
+}
+@media (min-width:641px) and (max-width: 1024px) {
+	.small, .large, .xlarge{
+		display:none;
+	}
+	.medium{display:block;}
+}
+
+@media (min-width:1025px) and (max-width: 1900px) {
+	.small, .medium, .xlarge{
+		display:none;
+	}
+	.large{display:block;}
+}
+
