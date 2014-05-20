@@ -76,3 +76,24 @@ Pantone Coated Neutral Black C
 
 $krukar-red: #ea002a;
 Pantone Coated 185 C
+
+## Patch Notes May 20 2014
+
+http://michaelkrukar.com/
+Tested from on May 20 at 12:47:28
+
+Page size
+442.7kB
+
+Load time
+811ms
+
+Requests
+24
+
+Perf. grade
+99/100
+
+Your website is faster than 92% of all tested websites
+
+Released Version 1

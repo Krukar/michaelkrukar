@@ -12,7 +12,7 @@ html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre
 // Global Variables
 $krukar-black: #222222;
 $krukar-red: #ea002a;
-$krukar-white: #FFF;
+$krukar-white: #FFF; 
 
 @font-face {
 	font-family: 'br';
@@ -78,6 +78,10 @@ a:hover{
 	color:$krukar-red;
 }
 
+a .no-hover{
+	color:$krukar-white;
+}
+
 #{headings()} { 
 	font-family: "br", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 	line-height:1;
@@ -85,7 +89,7 @@ a:hover{
 }
 
 h1{font-size:7em;}
-h2{font-size:5.5em;}
+h2{font-size:5.5em; margin-bottom:0.5em;}
 
 .red{
 	color:$krukar-red;
@@ -122,6 +126,12 @@ h2{font-size:5.5em;}
 	opacity:0.5;
 	zoom: 1;
 	filter: alpha(opacity=50);
+}
+
+.button img{
+	width:10%;
+	min-width:40px;
+	max-width:100px;
 }
 
 .button:hover{
@@ -170,6 +180,13 @@ h2{font-size:5.5em;}
 
 #dota-1000{
 	background: url(../img/dota-1000.jpg) no-repeat center center fixed; 	
+}
+
+#footer{
+	width:100%;
+	position:absolute;
+	bottom:0;
+	text-align: center;
 }
 
 // Fancy
