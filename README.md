@@ -1,3 +1,8 @@
+# MichaelKrukar.com Redesign February 2016
+
+## Patch Notes February 24 2016
+Begun working on a redesign. Currently nothing done.
+
 # MichaelKrukar.com Redesign May 2014
 
 ## Patch Notes May 3rd 2014
