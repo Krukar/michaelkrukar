@@ -1,5 +1,8 @@
 # MichaelKrukar.com Redesign February 2016
 
+##  Patch Notes July 10 2016
+Still have done nothing, but updated page to show some work.
+
 ## Patch Notes February 24 2016
 Begun working on a redesign. Currently nothing done.
 
