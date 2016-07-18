@@ -1,0 +1,32 @@
+.header{
+	padding: 0 1.5rem;
+
+	background: $black;
+	.logo{
+		height: 3rem;
+	}
+}
+
+.nav{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 0.875rem;
+	letter-spacing: 0.125rem;
+	.list{
+		display: flex;
+		height: 3.5rem;
+		align-items: center;
+	}
+	.nav-item{
+		padding-right: 2rem;
+		a{
+			color: $white;
+
+			font-weight: bold;
+
+			text-transform: uppercase;
+			&:hover{
+				color: $red;
+			}
+		}
+	}
+}

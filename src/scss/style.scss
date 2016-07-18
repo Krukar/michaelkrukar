@@ -1,0 +1,14 @@
+// Normalize CSS
+// I just copy and paste the latest npm release in to a .scss file
+@import 'components/normalize';
+@import 'components/vars';
+
+// Libraries
+@import 'bourbon';
+@import 'neat';
+
+// Components
+@import 'components/global';
+@import 'components/typography';
+@import 'components/header';
+@import 'components/main';

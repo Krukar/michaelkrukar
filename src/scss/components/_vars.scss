@@ -1,0 +1,9 @@
+$white: white;
+$black: #222222;
+$red: #EB0029;
+$yellow: #F6EB0D;
+$blue: #426FB6;
+
+@mixin tran{
+	transition: all 0.5s cubic-bezier(0, 0, 0.5, 1);
+}

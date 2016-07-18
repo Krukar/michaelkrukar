@@ -1,0 +1,57 @@
+a{
+	text-decoration: none;
+	@include tran;
+	&:hover{
+		color: $red;
+	}
+}
+
+.button{
+	display: block;
+	width: 100%;
+	margin: 2rem 0;
+	padding: 1rem 2rem;
+	border: none;
+
+	background: $black;
+	color: $white;
+
+	font-size: 0.875rem;
+	font-weight: bold;
+
+	text-align: center;
+	text-transform: uppercase;
+	cursor: pointer;
+	@include tran;
+	&:hover{
+		background: $red;
+		color: $white;
+	}
+}
+
+.list{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.logo{
+	cursor: pointer;
+	&:hover{
+		.whiteStrokes{
+			fill: red;
+		}
+	}
+	.whiteStrokes{
+		@include tran;
+	}
+	.whiteStrokes{
+		fill: white;
+	}
+	.blackStrokes{
+		fill: $black;
+	}
+	.fills{
+		fill: url(#gradient);
+	}
+}

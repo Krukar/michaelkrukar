@@ -1,0 +1,23 @@
+.main{
+	margin: 5rem 0;
+	@include outer-container;
+	.images{
+		@include span-columns(8);
+	}
+	.info{
+		@include span-columns(4);
+	}
+	.images{
+		text-align: center;
+		.image{
+			max-width: 80%;
+		}
+	}
+	.info{
+		.key{
+			font-weight: bold;
+
+			text-transform: uppercase;
+		}
+	}
+}
