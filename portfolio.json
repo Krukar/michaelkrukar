@@ -1,0 +1,10 @@
+{
+	"harley":{
+		"image": "harey.png",
+		"title": "Harley Lichtenstein",
+		"category": "art",
+		"info": ["I could never draw, but I could always steal. If you steal enough things, throw them together and do some actual work then it's your own. They won't question that you stole it. As long as you do some actual work, that's the key.", "Roy Fox Lichtenstein was an American pop artist. During the 1960s, along with Andy Warhol, Jasper Johns, and James Rosenquist among others, he became a leading figure in the new art movement.", "Harley Quinn (Harleen Frances Quinzel) is a fictional character appearing in American comic books published by DC Comics, commonly as an adversary of the superhero Batman and commonly as the Joker's sidekick."],
+		"status": "online",
+		"tools": "Illustrator"
+	}
+}

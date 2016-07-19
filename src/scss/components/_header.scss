@@ -8,7 +8,8 @@
 }
 
 .nav{
-	@include actionFont;
+	display: none;
+	@include fontUi;
 	font-size: 0.875rem;
 	.list{
 		display: flex;

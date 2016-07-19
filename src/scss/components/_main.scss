@@ -1,11 +1,13 @@
 .main{
-	margin: 5rem 0;
 	@include outer-container;
-	.images{
-		@include span-columns(8);
-	}
-	.info{
-		@include span-columns(4);
+	@include media($large){
+		.images{
+			margin-bottom: 0;
+			@include span-columns(8);
+		}
+		.info{
+			@include span-columns(4);
+		}
 	}
 	.images{
 		text-align: center;

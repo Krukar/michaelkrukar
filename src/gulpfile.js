@@ -2,7 +2,8 @@ var gulp = require('gulp'),
 ts = require('gulp-typescript'),
 concat = require('gulp-concat'),
 uglify = require('gulp-uglify'),
-sass = require('gulp-sass');
+sass = require('gulp-sass'),
+autoprefixer = require('gulp-autoprefixer');
 
 // Convert SASS to CSS
 gulp.task('css', function () {
@@ -12,6 +13,10 @@ gulp.task('css', function () {
 		outputStyle: 'compressed'
 	})
 	.on('error', sass.logError))
+	.pipe(autoprefixer({
+		browsers: ['last 2 versions'],
+		cascade: false
+	}))
 	.pipe(gulp.dest('../'));
 });
 

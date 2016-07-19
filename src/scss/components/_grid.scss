@@ -1,49 +1,37 @@
 .grid{
-	@include outer-container;
-	.tile{
-		min-height: 5rem;
-	}
-	.makeful{ 
-		background: url(http://i.imgur.com/wnEyCA9.jpg);
-	}
-	.netflix{
-		background: url(http://i.imgur.com/U7W6mRW.jpg);
-	}	
-	.radio{
-		background: url(http://i.imgur.com/IFKjPns.jpg);
-	}	
-	.schedulizer{
-		background: url(http://i.imgur.com/AdfpPSL.jpg);
-	}
-	.uber{
-		background: url(https://i.redd.it/wfr2x1qq7z9x.jpg);
-	}	
-	.makeful, .netflix, .radio, .schedulizer, .uber{
-		background-size: cover;
+	@include media($medium){
+		display: flex;
 	}
 	.grid-item{
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		height: 100%;
-		opacity: 0;
+		min-height: 10rem;
+
+		background: rgba($black, 0.5);
 
 		cursor: pointer;
 		@include tran;
-		&:hover{
-			opacity: 1;
-			background: rgba(0, 0, 0, 0.5);
+		@include media($medium){
+			background: $red;
+			opacity: 0;
+			height: 100%;
+			&:hover{
+				opacity: 1;
+			}
 		}
 		.title{
 			color: $white;
 
 			font-family: 'Spartan', 'Montserrat';
-			font-size: 3rem;			
+			font-size: 2rem;
+			@include media($medium){
+				font-size: 3rem;
+			}			
 		}
 	}
-	@include media($medium){
-		display: flex;
-		.tile{
+	.tile{
+		@include media($medium){
 			align-items: stretch;
 			flex: 1 1 auto;
 			min-height: min-content;
@@ -61,9 +49,24 @@
 				flex: none;
 				width: 66.666%;
 			}
-		}
-		.makeful{
-			min-height: 25rem;
-		}
+		}	
+	}
+	.makeful{ 
+		background: url(img/makeful.jpg) no-repeat center center;
+	}
+	.netflix{
+		background: url(img/netflix.png) no-repeat center top;
+	}	
+	.radio{
+		background: url(img/radio.png) no-repeat center center;
+	}	
+	.schedulizer{
+		background: url(img/schedulizer.png) no-repeat center top;
+	}
+	.uber{
+		background: url(https://i.redd.it/s4zfxgswm19x.jpg) no-repeat center center;
+	}	
+	.makeful, .netflix, .radio, .schedulizer, .uber{
+		background-size: cover;
 	}
 }

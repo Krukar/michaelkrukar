@@ -9,8 +9,8 @@ a{
 .button{
 	display: block;
 	width: 100%;
-	margin: 2rem 0;
-	padding: 1rem 2rem;
+	margin: $space auto;
+	padding: $space/2 $space;
 	border: none;
 
 	background: $black;
@@ -20,11 +20,17 @@ a{
 
 	text-align: center;
 	cursor: pointer;
-	@include actionFont;
+	@include fontUi;
 	@include tran;
 	&:hover{
 		background: $red;
 		color: $white;
+	}
+	@include media($medium){
+		width: 50%;
+	}
+	@include media($large){
+		width: 100%;
 	}
 }
 
