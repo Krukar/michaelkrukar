@@ -1,5 +1,12 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
-@import url(https://fonts.googleapis.com/css?family=Montserrat:700);
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+@font-face {
+	font-family: 'Spartan';
+	src: url('spartan.woff2') format('woff2');
+	font-weight: bold;
+	font-style: normal;
+}
 
 body{
 	font-family: 'Open Sans', sans-serif;
@@ -9,5 +16,7 @@ body{
 }
 
 h1, h2, h3{
+	font-family: 'Spartan', 'Montserrat';
+
 	margin-top: 0;
 }

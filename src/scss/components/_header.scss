@@ -8,9 +8,8 @@
 }
 
 .nav{
-	font-family: 'Montserrat', sans-serif;
+	@include actionFont;
 	font-size: 0.875rem;
-	letter-spacing: 0.125rem;
 	.list{
 		display: flex;
 		height: 3.5rem;
@@ -20,10 +19,6 @@
 		padding-right: 2rem;
 		a{
 			color: $white;
-
-			font-weight: bold;
-
-			text-transform: uppercase;
 			&:hover{
 				color: $red;
 			}

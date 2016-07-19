@@ -17,11 +17,10 @@ a{
 	color: $white;
 
 	font-size: 0.875rem;
-	font-weight: bold;
 
 	text-align: center;
-	text-transform: uppercase;
 	cursor: pointer;
+	@include actionFont;
 	@include tran;
 	&:hover{
 		background: $red;

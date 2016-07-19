@@ -4,6 +4,16 @@ $red: #EB0029;
 $yellow: #F6EB0D;
 $blue: #426FB6;
 
+$medium: 40rem; //640 
+$large: 80rem; //1280
+
 @mixin tran{
-	transition: all 0.5s cubic-bezier(0, 0, 0.5, 1);
+	transition: all 0.25s cubic-bezier(0, 0, 0.5, 1);
+}
+
+@mixin actionFont{
+	font-family: 'Montserrat';
+	font-weight: bold;
+	letter-spacing: 0.125rem;
+	text-transform: uppercase;
 }

@@ -1,0 +1,69 @@
+.grid{
+	@include outer-container;
+	.tile{
+		min-height: 5rem;
+	}
+	.makeful{ 
+		background: url(http://i.imgur.com/wnEyCA9.jpg);
+	}
+	.netflix{
+		background: url(http://i.imgur.com/U7W6mRW.jpg);
+	}	
+	.radio{
+		background: url(http://i.imgur.com/IFKjPns.jpg);
+	}	
+	.schedulizer{
+		background: url(http://i.imgur.com/AdfpPSL.jpg);
+	}
+	.uber{
+		background: url(https://i.redd.it/wfr2x1qq7z9x.jpg);
+	}	
+	.makeful, .netflix, .radio, .schedulizer, .uber{
+		background-size: cover;
+	}
+	.grid-item{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+		opacity: 0;
+
+		cursor: pointer;
+		@include tran;
+		&:hover{
+			opacity: 1;
+			background: rgba(0, 0, 0, 0.5);
+		}
+		.title{
+			color: $white;
+
+			font-family: 'Spartan', 'Montserrat';
+			font-size: 3rem;			
+		}
+	}
+	@include media($medium){
+		display: flex;
+		.tile{
+			align-items: stretch;
+			flex: 1 1 auto;
+			min-height: min-content;
+			&:not(.is-child){
+				display: flex;
+			}
+			&.is-vertical{
+				flex-direction: column;
+			}
+			&.is-4{
+				flex: none;
+				width: 33.333%;
+			}
+			&.is-8{
+				flex: none;
+				width: 66.666%;
+			}
+		}
+		.makeful{
+			min-height: 25rem;
+		}
+	}
+}
