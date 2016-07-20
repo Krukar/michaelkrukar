@@ -1,3 +1,7 @@
+body{
+	min-height: 20rem;
+}
+
 a{
 	text-decoration: none;
 	@include tran;
@@ -58,5 +62,11 @@ a{
 	}
 	.fills{
 		fill: url(#gradient);
+	}
+}
+
+.hideLarge{
+	@include media($large){
+		display: none;
 	}
 }

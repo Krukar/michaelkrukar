@@ -1,23 +1,27 @@
 .grid{
-	@include media($medium){
+	@include media($large){
 		display: flex;
 	}
-	.grid-item{
+	.gridItem{
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		min-height: 10rem;
+		min-height: 20rem;
 
 		background: rgba($black, 0.5);
 
 		cursor: pointer;
 		@include tran;
-		@include media($medium){
+		@include media($large){
 			background: $red;
 			opacity: 0;
 			height: 100%;
+			min-height: 10rem;
 			&:hover{
 				opacity: 1;
+			}
+			&.wip{
+				background: $black;
 			}
 		}
 		.title{
@@ -25,35 +29,54 @@
 
 			font-family: 'Spartan', 'Montserrat';
 			font-size: 2rem;
-			@include media($medium){
+			line-height: 1;
+
+			text-align: center;
+			@include media($large){
 				font-size: 3rem;
-			}			
+			}
+			.subtitle{
+				font-size: 1rem;
+				@include media($large){
+					.subtitle{
+						font-size: 1.5rem;
+					}			
+				}
+			}
 		}
 	}
 	.tile{
-		@include media($medium){
+		@include media($large){
 			align-items: stretch;
 			flex: 1 1 auto;
 			min-height: min-content;
-			&:not(.is-child){
+			&:not(.isChild){
 				display: flex;
 			}
-			&.is-vertical{
+			&.isVertical{
 				flex-direction: column;
 			}
-			&.is-4{
+			&.is8{
 				flex: none;
-				width: 33.333%;
-			}
-			&.is-8{
-				flex: none;
-				width: 66.666%;
+				width: 66%;
 			}
 		}	
+	}
+	.harley{ 
+		background: url(img/harley.png) no-repeat center center;
+	}
+	.kaleb{
+		background: url(http://i.imgur.com/TR7ilgb.jpg) no-repeat center center;
 	}
 	.makeful{ 
 		background: url(img/makeful.jpg) no-repeat center center;
 	}
+	.media{
+		background: url(http://i.imgur.com/URw6C0c.jpg) no-repeat center center;
+	}
+	.meundies{
+		background: url(https://i.redd.it/s4zfxgswm19x.jpg) no-repeat center center;
+	}	
 	.netflix{
 		background: url(img/netflix.png) no-repeat center top;
 	}	
@@ -63,10 +86,13 @@
 	.schedulizer{
 		background: url(img/schedulizer.png) no-repeat center top;
 	}
+	.trace{
+		background: url(http://i.imgur.com/uv6rSoq.jpg) no-repeat center center;
+	}
 	.uber{
-		background: url(https://i.redd.it/s4zfxgswm19x.jpg) no-repeat center center;
-	}	
-	.makeful, .netflix, .radio, .schedulizer, .uber{
+		background: url(http://i.imgur.com/KwdUtfn.jpg) no-repeat center center;
+	}
+	.makeful, .netflix, .radio, .schedulizer, .meundies{
 		background-size: cover;
 	}
 }

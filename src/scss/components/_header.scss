@@ -1,23 +1,39 @@
 .header{
+	position: fixed;
+	width: 100%;
 	padding: 0 1.5rem;
 
 	background: $black;
+	transform: translateY(-82%);
+	&.open{
+		transform: translateY(0);
+	}
+	@include tran;
+	@include media($large){
+		position: relative;
+		transform: translateY(0);
+	}
 	.logo{
 		height: 3rem;
 	}
 }
 
 .nav{
-	display: none;
 	@include fontUi;
 	font-size: 0.875rem;
 	.list{
-		display: flex;
-		height: 3.5rem;
-		align-items: center;
+		padding-top: $space;
+		@include media($large){
+			display: flex;
+			height: 3.5rem;
+			align-items: center;
+		}
 	}
-	.nav-item{
-		padding-right: 2rem;
+	.navItem{
+		padding-bottom: $space;
+		@include media($large){
+			padding-right: $space;
+		}
 		a{
 			color: $white;
 			&:hover{

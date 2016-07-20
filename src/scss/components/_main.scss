@@ -1,4 +1,10 @@
 .main{
+	max-height: 0;
+	overflow: hidden;
+	@include tran;
+	&.open{
+		max-height: 40rem;
+	}
 	@include outer-container;
 	@include media($large){
 		.images{
