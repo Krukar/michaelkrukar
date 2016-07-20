@@ -1,11 +1,8 @@
 .main{
 	max-height: 0;
 	overflow: hidden;
-	@include tran;
-	&.open{
-		max-height: 40rem;
-	}
 	@include outer-container;
+	@include tran;
 	@include media($large){
 		.images{
 			margin-bottom: 0;
@@ -15,10 +12,12 @@
 			@include span-columns(4);
 		}
 	}
+	&.open{
+		max-height: 40rem;
+	}
 	.images{
-		text-align: center;
 		.image{
-			max-width: 80%;
+			max-width: 100%;
 		}
 	}
 	.info{

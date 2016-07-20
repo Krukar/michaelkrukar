@@ -3,6 +3,8 @@
 	width: 100%;
 	padding: 0 1.5rem;
 
+	z-index: 10;
+
 	background: $black;
 	transform: translateY(-82%);
 	&.open{
@@ -19,6 +21,7 @@
 }
 
 .nav{
+	@include outer-container;
 	@include fontUi;
 	font-size: 0.875rem;
 	.list{
@@ -36,6 +39,8 @@
 		}
 		a{
 			color: $white;
+			
+			cursor: pointer;
 			&:hover{
 				color: $red;
 			}

@@ -1,5 +1,6 @@
 .grid{
-	@include media($large){
+	@include outer-container;
+	@include media($medium){
 		display: flex;
 	}
 	.gridItem{
@@ -12,7 +13,7 @@
 
 		cursor: pointer;
 		@include tran;
-		@include media($large){
+		@include media($medium){
 			background: $red;
 			opacity: 0;
 			height: 100%;
@@ -32,12 +33,12 @@
 			line-height: 1;
 
 			text-align: center;
-			@include media($large){
+			@include media($medium){
 				font-size: 3rem;
 			}
 			.subtitle{
 				font-size: 1rem;
-				@include media($large){
+				@include media($medium){
 					.subtitle{
 						font-size: 1.5rem;
 					}			
@@ -46,7 +47,7 @@
 		}
 	}
 	.tile{
-		@include media($large){
+		@include media($medium){
 			align-items: stretch;
 			flex: 1 1 auto;
 			min-height: min-content;
@@ -56,26 +57,40 @@
 			&.isVertical{
 				flex-direction: column;
 			}
-			&.is8{
+			&.isHalf, &.isThird{
 				flex: none;
-				width: 66%;
+			}
+			&.isHalf{
+				width: 50%;
+			}
+			&.isThird{
+				width: 65%;
 			}
 		}	
+	}
+	.barry{ 
+		background: url(img/barry.jpg) no-repeat center center;
 	}
 	.harley{ 
 		background: url(img/harley.png) no-repeat center center;
 	}
 	.kaleb{
-		background: url(http://i.imgur.com/TR7ilgb.jpg) no-repeat center center;
+		background: url(img/kaleb.png) no-repeat center center;
+	}
+	.krukar{
+		background: url(img/krukar.png) no-repeat center center;
+	}
+	.liquid{
+		background: url(img/liquid.jpg) no-repeat center top;
 	}
 	.makeful{ 
 		background: url(img/makeful.jpg) no-repeat center center;
 	}
 	.media{
-		background: url(http://i.imgur.com/URw6C0c.jpg) no-repeat center center;
+		background: url(img/media.png) no-repeat center top;
 	}
 	.meundies{
-		background: url(https://i.redd.it/s4zfxgswm19x.jpg) no-repeat center center;
+		background: url(img/meundies.jpg) no-repeat center center;
 	}	
 	.netflix{
 		background: url(img/netflix.png) no-repeat center top;
@@ -87,12 +102,15 @@
 		background: url(img/schedulizer.png) no-repeat center top;
 	}
 	.trace{
-		background: url(http://i.imgur.com/uv6rSoq.jpg) no-repeat center center;
+		background: url(img/trace.png) no-repeat center top;
 	}
 	.uber{
-		background: url(http://i.imgur.com/KwdUtfn.jpg) no-repeat center center;
+		background: url(img/uber.png) no-repeat center center;
 	}
-	.makeful, .netflix, .radio, .schedulizer, .meundies{
+	.wd40{
+	background: url(img/wd40.png) no-repeat center center;	
+	}
+	.barry, .harley, .kaleb, .liquid, .makeful, .media, .meundies, .netflix, .radio, .schedulizer, .trace, .uber, .wd40{
 		background-size: cover;
 	}
 }
