@@ -3,50 +3,8 @@
 	@include media($medium){
 		display: flex;
 	}
-	.gridItem{
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		min-height: 20rem;
-
-		background: rgba($black, 0.5);
-
-		cursor: pointer;
-		@include tran;
-		@include media($medium){
-			background: $red;
-			opacity: 0;
-			height: 100%;
-			min-height: 10rem;
-			&:hover{
-				opacity: 1;
-			}
-			&.wip{
-				background: $black;
-			}
-		}
-		.title{
-			color: $white;
-
-			font-family: 'Spartan', 'Montserrat';
-			font-size: 2rem;
-			line-height: 1;
-
-			text-align: center;
-			@include media($medium){
-				font-size: 3rem;
-			}
-			.subtitle{
-				font-size: 1rem;
-				@include media($medium){
-					.subtitle{
-						font-size: 1.5rem;
-					}			
-				}
-			}
-		}
-	}
 	.tile{
+		@include tran;
 		@include media($medium){
 			align-items: stretch;
 			flex: 1 1 auto;
@@ -66,51 +24,67 @@
 			&.isThird{
 				width: 65%;
 			}
+			&.hide{
+				opacity: 0;
+			}
 		}	
 	}
-	.barry{ 
-		background: url(img/barry.jpg) no-repeat center center;
+	.gridItem{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		min-height: $space * 10;
+
+		background: rgba($black, 0.5);
+
+		cursor: pointer;
+		@include tran;
+		@include media($medium){
+			background: $red;
+			opacity: 0;
+			height: 100%;
+			min-height: $space * 5;
+			&:hover{
+				opacity: 1;
+			}
+			&.wip{
+				background: $black;
+			}
+		}
 	}
-	.harley{ 
-		background: url(img/harley.png) no-repeat center center;
+	.title{
+		color: $white;
+
+		font-family: 'Spartan', 'Montserrat';
+		font-size: 2rem;
+		line-height: 1;
+
+		text-align: center;
+		@include media($medium){
+			font-size: 3rem;
+		}
+		.subtitle{
+			font-size: 1rem;
+			@include media($medium){
+				.subtitle{
+					font-size: 1.5rem;
+				}			
+			}
+		}
 	}
-	.kaleb{
-		background: url(img/kaleb.png) no-repeat center center;
-	}
-	.krukar{
-		background: url(img/krukar.png) no-repeat center center;
-	}
-	.liquid{
-		background: url(img/liquid.jpg) no-repeat center top;
-	}
-	.makeful{ 
-		background: url(img/makeful.jpg) no-repeat center center;
-	}
-	.media{
-		background: url(img/media.png) no-repeat center top;
-	}
-	.meundies{
-		background: url(img/meundies.jpg) no-repeat center center;
-	}	
-	.netflix{
-		background: url(img/netflix.png) no-repeat center top;
-	}	
-	.radio{
-		background: url(img/radio.png) no-repeat center center;
-	}	
-	.schedulizer{
-		background: url(img/schedulizer.png) no-repeat center top;
-	}
-	.trace{
-		background: url(img/trace.png) no-repeat center top;
-	}
-	.uber{
-		background: url(img/uber.png) no-repeat center center;
-	}
-	.wd40{
-	background: url(img/wd40.png) no-repeat center center;	
-	}
-	.barry, .harley, .kaleb, .liquid, .makeful, .media, .meundies, .netflix, .radio, .schedulizer, .trace, .uber, .wd40{
-		background-size: cover;
-	}
+	.barry{  background: url(img/barry.jpg) no-repeat center center; }
+	.harley{  background: url(img/harley.png) no-repeat center center; }
+	.kaleb{ background: url(img/kaleb.png) no-repeat center center; }
+	.krukar{ background: url(img/krukar.png) no-repeat center center; }
+	.liquid{ background: url(img/liquid.jpg) no-repeat center top; }
+	.makeful{  background: url(img/makeful.jpg) no-repeat center center; }
+	.media{ background: url(img/media.png) no-repeat center top; }
+	.meundies{ background: url(img/meundies.jpg) no-repeat center center; }	
+	.netflix{ background: url(img/netflix.png) no-repeat center top; }	
+	.radio{ background: url(img/radio.png) no-repeat center center; }	
+	.schedulizer{ background: url(img/schedulizer.png) no-repeat center top; }
+	.trace{ background: url(img/trace.png) no-repeat center top; }
+	.uber{ background: url(img/uber.png) no-repeat center top; }
+	.wd40{ background: url(img/wd40.png) no-repeat center center; }
+	.barry, .harley, .kaleb, .krukar, .liquid, .makeful, .media, .meundies, .netflix, .radio, .schedulizer, .trace, .uber, .wd40{ background-size: cover; }
 }

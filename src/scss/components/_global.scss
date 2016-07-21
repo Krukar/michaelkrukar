@@ -2,7 +2,11 @@ body{
 }
 
 a{
+	color: $black;
+
 	text-decoration: none;
+	cursor: pointer;
+
 	@include tran;
 	&:hover{
 		color: $red;
@@ -64,8 +68,30 @@ a{
 	}
 }
 
-.hideLarge{
-	@include media($large){
-		display: none;
+.nav{
+	font-size: 0.875rem;
+
+	@include outer-container;
+	@include fontUi;
+	.list{
+		display: flex;
+		@include media($medium){
+			align-items: center;
+
+			padding: 0 $space/2;
+		}
+		@include media($large){
+			padding: 0;
+		}
+	}
+	.navItem{
+		@include media($medium){
+			padding-right: $space;
+		}
+		a{
+			&:hover{
+				color: $red;
+			}
+		}
 	}
 }

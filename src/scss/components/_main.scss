@@ -13,7 +13,7 @@
 		}
 	}
 	&.open{
-		max-height: 40rem;
+		max-height: $space * 20;
 	}
 	.images{
 		.image{

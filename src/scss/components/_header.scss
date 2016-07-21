@@ -1,48 +1,35 @@
 .header{
-	position: fixed;
-	width: 100%;
-	padding: 0 1.5rem;
+	background: $black;	
+	.title{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: $space * 1.75;
+		margin: 0;
 
-	z-index: 10;
+		color: $white;
 
-	background: $black;
-	transform: translateY(-82%);
-	&.open{
-		transform: translateY(0);
-	}
-	@include tran;
-	@include media($large){
-		position: relative;
-		transform: translateY(0);
-	}
-	.logo{
-		height: 3rem;
-	}
-}
-
-.nav{
-	@include outer-container;
-	@include fontUi;
-	font-size: 0.875rem;
-	.list{
-		padding-top: $space;
-		@include media($large){
-			display: flex;
-			height: 3.5rem;
-			align-items: center;
+		@include fontUi;
+		font-size: 0.875rem;
+		@include media($medium){
+			display: none;
 		}
 	}
-	.navItem{
-		padding-bottom: $space;
-		@include media($large){
-			padding-right: $space;
+	.nav{
+		display: none;
+		@include tran;
+		@include media($medium){
+			display: block;
 		}
-		a{
-			color: $white;
-			
-			cursor: pointer;
-			&:hover{
-				color: $red;
+		.list{
+			height: $space * 1.75;
+		}
+		.navItem{
+			a{
+				color: $white;
+				&:hover{
+					color: $red;
+				}
 			}
 		}
 	}
