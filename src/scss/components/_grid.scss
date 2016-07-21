@@ -1,75 +1,63 @@
-.grid{
+#grid{
 	@include outer-container;
-	@include media($medium){
-		display: flex;
+	flex-direction: column;
+	&.filter{
+		.tile{
+			display: block;
+		}
 	}
 	.tile{
+		align-items: stretch;
+		flex: 1 1 auto;
+		min-height: 20rem;
 		@include tran;
 		@include media($medium){
-			align-items: stretch;
-			flex: 1 1 auto;
-			min-height: min-content;
-			&:not(.isChild){
-				display: flex;
-			}
-			&.isVertical{
-				flex-direction: column;
-			}
-			&.isHalf, &.isThird{
-				flex: none;
-			}
-			&.isHalf{
-				width: 50%;
-			}
-			&.isThird{
-				width: 65%;
-			}
-			&.hide{
-				opacity: 0;
-			}
-		}	
-	}
-	.gridItem{
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		min-height: $space * 10;
-
-		background: rgba($black, 0.5);
-
-		cursor: pointer;
-		@include tran;
-		@include media($medium){
-			background: $red;
-			opacity: 0;
-			height: 100%;
-			min-height: $space * 5;
-			&:hover{
-				opacity: 1;
-			}
-			&.wip{
-				background: $black;
-			}
+			display: flex;
+			min-height: 10rem;
+			min-width: 10rem;
 		}
-	}
-	.title{
-		color: $white;
+		.bg{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 20rem;
+			width: 100%;
 
-		font-family: 'Spartan', 'Montserrat';
-		font-size: 2rem;
-		line-height: 1;
+			background: rgba($black, 0.5);
 
-		text-align: center;
-		@include media($medium){
-			font-size: 3rem;
-		}
-		.subtitle{
-			font-size: 1rem;
+			cursor: pointer;
+			@include tran;
 			@include media($medium){
-				.subtitle{
-					font-size: 1.5rem;
-				}			
+				height: auto;
+
+				opacity: 0;				
+
+				background: $white;
 			}
+			.title{
+				color: $white;
+
+				font-family: 'Spartan', 'Montserrat';
+				font-size: 2rem;
+				line-height: 1;
+				text-align: center;
+				@include media($medium){
+					color: $black;
+				}
+				.subtitle{
+					font-size: 1rem;
+				}
+			}
+		}
+		&.vertical{
+			flex-direction: column;
+		}
+		&.hide{
+			display: none;
+		}
+		&:hover{
+			min-height: 20rem;
+			// min-width: 20rem;
 		}
 	}
 	.barry{  background: url(img/barry.jpg) no-repeat center center; }
@@ -86,5 +74,12 @@
 	.trace{ background: url(img/trace.png) no-repeat center top; }
 	.uber{ background: url(img/uber.png) no-repeat center top; }
 	.wd40{ background: url(img/wd40.png) no-repeat center center; }
-	.barry, .harley, .kaleb, .krukar, .liquid, .makeful, .media, .meundies, .netflix, .radio, .schedulizer, .trace, .uber, .wd40{ background-size: cover; }
+	.barry, .harley, .kaleb, .krukar, .liquid, .makeful, .media, .meundies, .netflix, .radio, .schedulizer, .trace, .uber, .wd40{ 
+		background-size: cover;
+		&:hover{
+			.bg{
+				opacity: 1;
+			}
+		}
+	}
 }

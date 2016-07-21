@@ -1,5 +1,5 @@
 .main{
-	max-height: 0;
+	display: none;
 	overflow: hidden;
 	@include outer-container;
 	@include tran;
@@ -11,9 +11,6 @@
 		.info{
 			@include span-columns(4);
 		}
-	}
-	&.open{
-		max-height: $space * 20;
 	}
 	.images{
 		.image{
