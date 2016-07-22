@@ -1,33 +1,31 @@
-var grid = document.getElementById('grid');
+var filter = function(cat){
+	document.getElementById('grid').classList.add('filter');
+	var hide = document.querySelectorAll('.show');
+	for(item of hide){
+		item.classList.remove('show');
+	}
+	var show = document.querySelectorAll(cat);
+	for(item of show){
+		item.classList.add('show');
+	}
+};
 
 document.getElementById('jsWebToggle').addEventListener('click', function(){
-	grid.classList.toggle('filter');
-	var hide = document.querySelectorAll('.harley, .kaleb, .krukar, .liquid, .wd40, .barry, .meundies');
-	for(item of hide){
-		item.classList.toggle('hide');
-	}
+	var cat = '.web';
+	filter(cat);
 });
 
 document.getElementById('jsArtToggle').addEventListener('click', function(){
-	grid.classList.toggle('filter');
-	var hide = document.querySelectorAll('.makeful, .media, .netflix, .radio, .schedulizer, .trace, .uber, .liquid, .wd40, .barry, .meundies');
-	for(item of hide){
-		item.classList.toggle('hide');
-	}
+	var cat = '.art';
+	filter(cat);
 });
 
 document.getElementById('jsVideoToggle').addEventListener('click', function(){
-	grid.classList.toggle('filter');
-	var hide = document.querySelectorAll('.makeful, .media, .netflix, .radio, .schedulizer, .trace, .uber, .harley, .kaleb, .krukar, .barry, .meundies');
-	for(item of hide){
-		item.classList.toggle('hide');
-	}
+	var cat = '.video';
+	filter(cat);
 });
 
 document.getElementById('jsPhotoToggle').addEventListener('click', function(){
-	grid.classList.toggle('filter');
-	var hide = document.querySelectorAll('.makeful, .media, .netflix, .radio, .schedulizer, .trace, .uber, .harley, .kaleb, .krukar, .liquid, .wd40');
-	for(item of hide){
-		item.classList.toggle('hide');
-	}
+	var cat = '.photo';
+	filter(cat);
 });

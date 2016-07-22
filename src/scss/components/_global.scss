@@ -76,6 +76,7 @@ a{
 	@include fontUi;
 	.list{
 		display: flex;
+		@include tran;
 		@include media($medium){
 			align-items: center;
 

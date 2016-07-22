@@ -1,20 +1,36 @@
 #grid{
 	@include outer-container;
 	flex-direction: column;
-	&.filter{
-		.tile{
-			display: block;
+	@include media($medium){
+		&.filter{
+			.tile{
+				display: block;
+				.makeful{
+					background-position: center top;
+				}
+				.liquid{
+					background-position: center bottom;
+				}
+				.barry, .harley, .kaleb, .krukar, .liquid, .makeful, .media, .meundies, .netflix, .radio, .schedulizer, .trace, .uber, .wd40, .bg{
+					display: none;
+					height: 15rem;
+					&:hover{
+						height: 15rem;
+						min-height: 15rem;
+					}
+					&.show{
+						display: block;
+					}
+				}
+			}
 		}
 	}
 	.tile{
 		align-items: stretch;
 		flex: 1 1 auto;
-		min-height: 20rem;
 		@include tran;
 		@include media($medium){
 			display: flex;
-			min-height: 10rem;
-			min-width: 10rem;
 		}
 		.bg{
 			display: flex;
@@ -52,13 +68,6 @@
 		&.vertical{
 			flex-direction: column;
 		}
-		&.hide{
-			display: none;
-		}
-		&:hover{
-			min-height: 20rem;
-			// min-width: 20rem;
-		}
 	}
 	.barry{  background: url(img/barry.jpg) no-repeat center center; }
 	.harley{  background: url(img/harley.png) no-repeat center center; }
@@ -79,6 +88,14 @@
 		&:hover{
 			.bg{
 				opacity: 1;
+			}
+		}
+		@include media($medium){
+			min-height: 10rem;
+			min-width: 10rem;
+			&:hover{
+				min-height: 20rem;
+				min-width: 20rem;
 			}
 		}
 	}
