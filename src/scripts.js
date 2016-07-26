@@ -1,4 +1,5 @@
 (function(){
+	// Portfolio
 	var portfolio = {
 		harley:{
 			"image": "harley.png",
@@ -29,35 +30,20 @@
 		}
 	};
 
+	// init a random portfolio piece
 	var pieces = Object.keys(portfolio);
 	var key = pieces[Math.floor(Math.random() * pieces.length)];
 	setMain(key);
 
-// USE DATA ATTR
-	document.querySelector('navItem').addEventListener('click', function(){
-		console.log('foo')
-	})
+	// Add event handlers for menu toggles
+	var toggles = document.querySelectorAll('.header .navItem a');
+	for(var i = 0; i < toggles.length; i++){
+		toggles[i].addEventListener('click', function(){
+			document.body.classList.toggle(this.dataset.toggle);
+		});
+	}
 
-	document.getElementById('jsWebToggle').addEventListener('click', function(){
-		document.body.classList.remove('showArt', 'showVideo', 'showPhoto');
-		document.body.classList.toggle('showWeb');
-	});
-
-	document.getElementById('jsArtToggle').addEventListener('click', function(){
-		document.body.classList.remove('showWeb', 'showVideo', 'showPhoto');
-		document.body.classList.toggle('showArt');
-	});
-
-	document.getElementById('jsVideoToggle').addEventListener('click', function(){
-		document.body.classList.remove('showWeb', 'showArt', 'showPhoto');
-		document.body.classList.toggle('showVideo');
-	});
-
-	document.getElementById('jsPhotoToggle').addEventListener('click', function(){
-		document.body.classList.remove('showWeb', 'showArt', 'showVideo');
-		document.body.classList.toggle('showPhoto');
-	});
-
+	// Set portfolio piece
 	document.getElementById('jsRadio').addEventListener('click', function(){
 		setMain('radio');
 	});

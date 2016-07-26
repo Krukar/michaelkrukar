@@ -78,7 +78,7 @@
 }
 
 @include media($medium){
-	.showWeb, .showArt, .showPhoto, .showVideo{
+	.web, .art, .photo, .video{
 		#grid{
 			.tile{
 				display: block;
@@ -91,7 +91,7 @@
 			}
 		}
 	}
-	.showWeb #grid{
+	.web #grid{
 		.art, .photo, .video{
 			display: none;
 		}
@@ -99,17 +99,17 @@
 			background-position: center top;
 		}
 	}
-	.showArt #grid{
+	.art #grid{
 		.web, .photo, .video{
 			display: none;
 		}
 	}
-	.showPhoto #grid{
+	.photo #grid{
 		.web, .art, .video{
 			display: none;
 		}
 	}
-	.showVideo #grid{
+	.video #grid{
 		.web, .art, .photo{
 			display: none;
 		}
