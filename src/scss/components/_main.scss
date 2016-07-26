@@ -1,11 +1,14 @@
 .main{
-	display: none;
-	overflow: hidden;
 	@include outer-container;
-	@include tran;
-	@include media($large){
+	margin-top: $space;
+	margin-bottom: $space;
+	&.show{
+		display: block;
+	}
+	@include media($medium){
+		margin-top: $space * 2;
+		margin-bottom: $space * 2;
 		.images{
-			margin-bottom: 0;
 			@include span-columns(8);
 		}
 		.info{
@@ -14,10 +17,25 @@
 	}
 	.images{
 		.image{
-			max-width: 100%;
+			width: 100%;
+			margin: 0 auto;
 		}
 	}
 	.info{
+		padding: $space $space 0;
+
+		text-align: center;
+		@include media($medium){
+			padding: 0 $space;
+		}
+		p{
+			text-align: justify;
+		}
+		.list{
+			margin-bottom: $space;
+
+			text-align: justify;
+		}
 		.key{
 			font-weight: bold;
 

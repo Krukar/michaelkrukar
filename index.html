@@ -12,12 +12,12 @@
 
 <body>
 
-  <header id="jsMenu" class="header">
+  <header class="header">
     <div class="title">Michael Krukar</div>
     <div class="nav">
       <ul class="list">
         <li class="navItem">
-          <a id="jsWebToggle">web</a>
+          <a id="jsWebToggle" data-toggle="web">web</a>
         </li>
         <li class="navItem">
           <a id="jsArtToggle">art</a>
@@ -34,26 +34,24 @@
 
   <main id="jsMain" class="main">
     <div class="images">
-      <img class="image" src="img/meundies.jpg" alt="portfolio image">
+      <img id="jsImage" class="image" src="" alt="portfolio image">
     </div>
     <div class="info">
-      <h1>Harley Lichtenstein</h1>
-      <h2>Category: Art</h2>
-      <p>I could never draw, but I could always steal. If you steal enough things, throw them together and do some actual work then it's your own. They won't question that you stole it. As long as you do some actual work, that's the key.</p>
-      <p>Roy Fox Lichtenstein was an American pop artist. During the 1960s, along with Andy Warhol, Jasper Johns, and James Rosenquist among others, he became a leading figure in the new art movement.</p>
-      <p>Harley Quinn (Harleen Frances Quinzel) is a fictional character appearing in American comic books published by DC Comics, commonly as an adversary of the superhero Batman and commonly as the Joker's sidekick.</p>
+      <h1 id="jsTitle"></h1>
+      <h2 id="jsCategory"></h2>
+      <div id="jsInfo"></div>
       <ul class="list">
-        <li><span class="key">Status:</span> Online</li>
-        <li><span class="key">Tools:</span> Illustrator</li>
+        <li><span class="key">Status:</span> <span id="jsStatus"></span></li>
+        <li><span class="key">Tools:</span> <span id="jsTools"></span></li>
       </ul>
-      <a class="button" href="img/harley.png" target="_blank">Click To View</a>
+      <a id="jsLink" class="button" href="" target="_blank">Click To View</a>
     </div>
   </main>
 
   <div id="grid" class="tile">
     <div class="tile">
       <div class="tile vertical">
-        <div class="tile radio web">
+        <div id="jsRadio" class="tile radio web">
           <div class="bg">
             <div class="title">
               Krukar Radio
@@ -82,7 +80,7 @@
               </div>
             </div>
           </div>
-          <div class="tile harley art">
+          <div id="jsHarley" class="tile harley art">
             <div class="bg">
               <div class="title">
                 Harley Lichtenstein
@@ -179,7 +177,7 @@
         <div class="tile uber web">
           <div class="bg">
             <div class="title">
-            Uber Visualizer
+              Uber Visualizer
               <br>
               <span class="subtitle">Web</span>
             </div>

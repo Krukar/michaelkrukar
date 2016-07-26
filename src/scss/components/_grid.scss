@@ -1,30 +1,6 @@
 #grid{
 	@include outer-container;
 	flex-direction: column;
-	@include media($medium){
-		&.filter{
-			.tile{
-				display: block;
-				.makeful{
-					background-position: center top;
-				}
-				.liquid{
-					background-position: center bottom;
-				}
-				.barry, .harley, .kaleb, .krukar, .liquid, .makeful, .media, .meundies, .netflix, .radio, .schedulizer, .trace, .uber, .wd40, .bg{
-					display: none;
-					height: 15rem;
-					&:hover{
-						height: 15rem;
-						min-height: 15rem;
-					}
-					&.show{
-						display: block;
-					}
-				}
-			}
-		}
-	}
 	.tile{
 		align-items: stretch;
 		flex: 1 1 auto;
@@ -83,7 +59,7 @@
 	.trace{ background: url(img/trace.png) no-repeat center top; }
 	.uber{ background: url(img/uber.png) no-repeat center top; }
 	.wd40{ background: url(img/wd40.png) no-repeat center center; }
-	.barry, .harley, .kaleb, .krukar, .liquid, .makeful, .media, .meundies, .netflix, .radio, .schedulizer, .trace, .uber, .wd40{ 
+	.web, .art, .video, .photo{ 
 		background-size: cover;
 		&:hover{
 			.bg{
@@ -97,6 +73,48 @@
 				min-height: 20rem;
 				min-width: 20rem;
 			}
+		}
+	}
+}
+
+@include media($medium){
+	.showWeb, .showArt, .showPhoto, .showVideo{
+		#grid{
+			.tile{
+				display: block;
+			}
+			.web, .art, .video, .photo, .bg{
+				min-height: 15rem;
+				&:hover{
+					min-height: 15rem;
+				}
+			}
+		}
+	}
+	.showWeb #grid{
+		.art, .photo, .video{
+			display: none;
+		}
+		.makeful{
+			background-position: center top;
+		}
+	}
+	.showArt #grid{
+		.web, .photo, .video{
+			display: none;
+		}
+	}
+	.showPhoto #grid{
+		.web, .art, .video{
+			display: none;
+		}
+	}
+	.showVideo #grid{
+		.web, .art, .photo{
+			display: none;
+		}
+		.liquid{
+			background-position: center bottom;
 		}
 	}
 }

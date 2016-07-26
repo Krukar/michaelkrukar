@@ -33,3 +33,10 @@
 		}
 	}
 }
+
+.showWeb #jsWebToggle,
+.showArt #jsArtToggle,
+.showVideo #jsVideoToggle,
+.showPhoto #jsPhotoToggle{
+	color: $red;
+}
