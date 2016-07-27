@@ -1,29 +1,25 @@
 .header{
 	background: $black;	
-	.title{
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		height: $space * 1.75;
-		margin: 0;
-
-		color: $white;
-
-		@include fontUi;
-		font-size: 0.875rem;
-		@include media($medium){
-			display: none;
-		}
-	}
 	.nav{
-		display: none;
-		@include media($medium){
-			display: block;
-		}
+		font-size: 0.875rem;
+
+		@include outer-container;
+		@include fontUi;
 		.list{
-			height: $space * 1.75;
+			@include tran;
+			@include media($large){
+				display: flex;
+				height: $space * 1.75;
+				align-items: center;
+
+				padding: 0;
+			}
 		}
 		.navItem{
+			color: $white;
+			@include media($medium){
+				padding-right: $space;
+			}
 			a{
 				color: $white;
 				&:hover{
@@ -32,11 +28,4 @@
 			}
 		}
 	}
-}
-
-.showWeb #jsWebToggle,
-.showArt #jsArtToggle,
-.showVideo #jsVideoToggle,
-.showPhoto #jsPhotoToggle{
-	color: $red;
 }

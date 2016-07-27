@@ -1,5 +1,6 @@
-#grid{
+.grid{
 	@include outer-container;
+	margin-bottom: $space;
 	flex-direction: column;
 	.tile{
 		align-items: stretch;
@@ -45,12 +46,12 @@
 			flex-direction: column;
 		}
 	}
-	.barry{  background: url(img/barry.jpg) no-repeat center center; }
-	.harley{  background: url(img/harley.png) no-repeat center center; }
+	.barry{ background: url(img/barry.jpg) no-repeat center center; }
+	.harley{ background: url(img/harley.png) no-repeat center center; }
 	.kaleb{ background: url(img/kaleb.png) no-repeat center center; }
 	.krukar{ background: url(img/krukar.png) no-repeat center center; }
 	.liquid{ background: url(img/liquid.jpg) no-repeat center top; }
-	.makeful{  background: url(img/makeful.jpg) no-repeat center center; }
+	.makeful{ background: url(img/makeful.jpg) no-repeat center center; }
 	.media{ background: url(img/media.png) no-repeat center top; }
 	.meundies{ background: url(img/meundies.jpg) no-repeat center center; }	
 	.netflix{ background: url(img/netflix.png) no-repeat center top; }	
@@ -59,7 +60,7 @@
 	.trace{ background: url(img/trace.png) no-repeat center top; }
 	.uber{ background: url(img/uber.png) no-repeat center top; }
 	.wd40{ background: url(img/wd40.png) no-repeat center center; }
-	.web, .art, .video, .photo{ 
+	.barry, .harley, .kaleb, .krukar, .liquid, .makeful, .media, .meundies, .netflix, .radio, .schedulizer, .trace, .uber, .wd40{ 
 		background-size: cover;
 		&:hover{
 			.bg{
@@ -73,48 +74,6 @@
 				min-height: 20rem;
 				min-width: 20rem;
 			}
-		}
-	}
-}
-
-@include media($medium){
-	.web, .art, .photo, .video{
-		#grid{
-			.tile{
-				display: block;
-			}
-			.web, .art, .video, .photo, .bg{
-				min-height: 15rem;
-				&:hover{
-					min-height: 15rem;
-				}
-			}
-		}
-	}
-	.web #grid{
-		.art, .photo, .video{
-			display: none;
-		}
-		.makeful{
-			background-position: center top;
-		}
-	}
-	.art #grid{
-		.web, .photo, .video{
-			display: none;
-		}
-	}
-	.photo #grid{
-		.web, .art, .video{
-			display: none;
-		}
-	}
-	.video #grid{
-		.web, .art, .photo{
-			display: none;
-		}
-		.liquid{
-			background-position: center bottom;
 		}
 	}
 }

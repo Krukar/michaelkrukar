@@ -9,8 +9,8 @@ $large: 75rem; //1280
 
 $space: 2rem;
 
-@mixin tran{
-	transition: all 0.5s cubic-bezier(0, 0, 0.5, 1);
+@mixin tran($speed: 0.5s){
+	transition: all $speed cubic-bezier(0, 0, 0.5, 1);
 }
 
 @mixin fontUi{

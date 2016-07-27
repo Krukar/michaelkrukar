@@ -1,5 +1,9 @@
 body{
 	min-width: 20rem;
+	@include tran(1s);
+	&.fadeOut{
+		opacity: 0;
+	}
 }
 
 a{
@@ -63,34 +67,5 @@ a{
 	}
 	.fills{
 		fill: url(#gradient);
-	}
-}
-
-.nav{
-	font-size: 0.875rem;
-
-	@include outer-container;
-	@include fontUi;
-	.list{
-		display: flex;
-		@include tran;
-		@include media($medium){
-			align-items: center;
-
-			padding: 0 $space/2;
-		}
-		@include media($large){
-			padding: 0;
-		}
-	}
-	.navItem{
-		@include media($medium){
-			padding-right: $space;
-		}
-		a{
-			&:hover{
-				color: $red;
-			}
-		}
 	}
 }
