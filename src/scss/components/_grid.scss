@@ -1,13 +1,12 @@
 .grid{
 	@include outer-container;
 	margin-bottom: $space;
-	flex-direction: column;
 	.tile{
-		align-items: stretch;
-		flex: 1 1 auto;
 		@include tran;
 		@include media($medium){
 			display: flex;
+			align-items: stretch;
+			flex: 1 1 auto;
 		}
 		.bg{
 			display: flex;
@@ -46,21 +45,28 @@
 			flex-direction: column;
 		}
 	}
-	.barry{ background: url(img/barry.jpg) no-repeat center center; }
-	.harley{ background: url(img/harley.png) no-repeat center center; }
-	.kaleb{ background: url(img/kaleb.png) no-repeat center center; }
-	.krukar{ background: url(img/krukar.png) no-repeat center center; }
-	.liquid{ background: url(img/liquid.jpg) no-repeat center top; }
-	.makeful{ background: url(img/makeful.jpg) no-repeat center center; }
-	.media{ background: url(img/media.png) no-repeat center top; }
-	.meundies{ background: url(img/meundies.jpg) no-repeat center center; }	
-	.netflix{ background: url(img/netflix.png) no-repeat center top; }	
-	.radio{ background: url(img/radio.png) no-repeat center center; }	
-	.schedulizer{ background: url(img/schedulizer.png) no-repeat center top; }
-	.trace{ background: url(img/trace.png) no-repeat center top; }
-	.uber{ background: url(img/uber.png) no-repeat center top; }
-	.wd40{ background: url(img/wd40.png) no-repeat center center; }
+	.barry{ background-image: url(img/barry.jpg); }
+	.harley{ background-image: url(img/harley.png); }
+	.kaleb{ background-image: url(img/kaleb.png); }
+	.krukar{ background-image: url(img/krukar.png); }
+	.liquid{ background-image: url(img/liquid.jpg); }
+	.makeful{ background-image: url(img/makeful.jpg); }
+	.media{ background-image: url(img/media.png); }
+	.meundies{ background-image: url(img/meundies.jpg);}	
+	.netflix{ background-image: url(img/netflix.png);}	
+	.radio{ background-image: url(img/radio.png);}	
+	.schedulizer{ background-image: url(img/schedulizer.png); }
+	.trace{ background-image: url(img/trace.png); }
+	.uber{ background-image: url(img/uber.png); }
+	.wd40{ background-image: url(img/wd40.png); }
+		.barry, .harley, .kaleb, .krukar, .makeful, .meundies, .radio, .wd40{
+		background-position: center center;
+	}
+	.liquid, .media, .netflix, .schedulizer, .trace, .uber{
+		background-position: center top;
+	}
 	.barry, .harley, .kaleb, .krukar, .liquid, .makeful, .media, .meundies, .netflix, .radio, .schedulizer, .trace, .uber, .wd40{ 
+		background-repeat: no-repeat;
 		background-size: cover;
 		&:hover{
 			.bg{

@@ -137,6 +137,11 @@
 		});
 	}
 
+	// Toggle mobile menu
+	document.getElementById('jsHeaderToggle').addEventListener('click', function(){
+		document.getElementById('jsHeader').classList.toggle('open');
+	})
+
 	// Set a piece to be shown
 	function setKey(key){
 		var piece = portfolio[key];
@@ -161,6 +166,7 @@
 		}, 1000);
 	}
 
+	// If someone links to a piece
 	if(window.location.hash){
 		setKey(window.location.hash.substring(1));
 	}

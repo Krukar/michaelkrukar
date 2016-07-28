@@ -1,24 +1,47 @@
 .header{
-	background: $black;	
+	background: $black;
+	&.open{
+		.nav{
+			transform: translateY(0);
+		}
+	}
 	.nav{
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100vw;
+
+		background: $black;	
+
 		font-size: 0.875rem;
+
+		transform: translateY(-24rem);
 
 		@include outer-container;
 		@include fontUi;
+		@include tran;
+		@include media($large){
+			position: relative;
+		}
 		.list{
 			@include tran;
-			@include media($large){
+			@include media($medium){
 				display: flex;
 				height: $space * 1.75;
 				align-items: center;
 
+				padding-left: $space;
+			}
+			@include media($large){
 				padding: 0;
 			}
 		}
 		.navItem{
+			padding: $space/2;
+
 			color: $white;
 			@include media($medium){
-				padding-right: $space;
+				padding: 0 $space 0 0;
 			}
 			a{
 				color: $white;
