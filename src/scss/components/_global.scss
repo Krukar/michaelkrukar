@@ -16,6 +16,12 @@ a{
 	}
 }
 
+.container{
+	@include media($small){
+		margin-top: $space * 1.75;
+	}
+}
+
 .button{
 	display: block;
 	width: 100%;

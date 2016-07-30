@@ -139,7 +139,7 @@
 
 	// Toggle mobile menu
 	document.getElementById('jsHeaderToggle').addEventListener('click', function(){
-		document.getElementById('jsHeader').classList.toggle('open');
+		document.getElementById('jsHeader').classList.toggle('close');
 	})
 
 	// Set a piece to be shown
@@ -161,14 +161,14 @@
 		setTimeout(function(){ 
 			window.scrollTo(0, 0);
 			setKey(key);
-			window.location.hash = key;
+			window.location.pathname = key;
 			document.body.classList.remove('fadeOut');
 		}, 1000);
 	}
 
 	// If someone links to a piece
-	if(window.location.hash){
-		setKey(window.location.hash.substring(1));
+	if(window.location.pathname !== '/'){
+		setKey(window.location.pathname.substring(1));
 	}
 
 })();

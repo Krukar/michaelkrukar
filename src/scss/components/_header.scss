@@ -1,8 +1,10 @@
 .header{
 	background: $black;
-	&.open{
-		.nav{
-			transform: translateY(0);
+	@include media($small){
+		&.close{
+			.nav{
+				transform: translateY(calc(-100% + 56px));	
+			}
 		}
 	}
 	.nav{
@@ -10,17 +12,15 @@
 		top: 0;
 		left: 0;
 		width: 100vw;
+		min-width: 20rem;
 
 		background: $black;	
 
 		font-size: 0.875rem;
-
-		transform: translateY(-24rem);
-
 		@include outer-container;
 		@include fontUi;
-		@include tran;
-		@include media($large){
+		@include tran(transform);
+		@include media($medium){
 			position: relative;
 		}
 		.list{
@@ -37,7 +37,7 @@
 			}
 		}
 		.navItem{
-			padding: $space/2;
+			padding: $space/ 1.6;
 
 			color: $white;
 			@include media($medium){
