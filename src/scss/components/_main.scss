@@ -2,9 +2,6 @@
 	@include outer-container;
 	margin-top: $space;
 	margin-bottom: $space;
-	&.hide{
-		display: none;
-	}
 	@include media($medium){
 		margin-top: $space * 1.5;
 		margin-bottom: $space * 1.5;
@@ -37,6 +34,8 @@
 			text-align: justify;
 		}
 		.key{
+			margin-bottom: $space / 4;
+			
 			font-weight: bold;
 
 			text-transform: uppercase;

@@ -1,7 +1,6 @@
 var gulp = require('gulp'),
-ts = require('gulp-typescript'),
-concat = require('gulp-concat'),
 uglify = require('gulp-uglify'),
+rename = require("gulp-rename"),
 sass = require('gulp-sass'),
 autoprefixer = require('gulp-autoprefixer');
 
@@ -16,6 +15,20 @@ gulp.task('css', function () {
 	.pipe(autoprefixer({
 		browsers: ['last 2 versions'],
 		cascade: false
+	}))
+	.pipe(gulp.dest('../'));
+});
+
+// Compile min.js
+gulp.task('js', function() {
+	return gulp.src(['./scripts.js'])
+	.pipe(uglify({
+		compress:{
+			drop_console: true
+		}
+	}))
+	.pipe(rename({
+		suffix: '.min'
 	}))
 	.pipe(gulp.dest('../'));
 });

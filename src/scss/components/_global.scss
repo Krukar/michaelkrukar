@@ -16,6 +16,19 @@ a{
 	}
 }
 
+p{
+	a{
+		color: $red;
+		&:hover{
+			color: $black;
+		}
+	}
+}
+
+::selection {
+  background: $red;
+}
+
 .container{
 	@include media($small){
 		margin-top: $space * 1.75;
@@ -51,6 +64,17 @@ a{
 	margin: 0;
 	padding: 0;
 	list-style-type: none;
+}
+
+.hide{
+	display: none;
+}
+
+.showMediumUp{
+	display: none;
+	@include media($medium){
+		display: inline-block;
+	}
 }
 
 .showLargeUp{

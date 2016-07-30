@@ -57,15 +57,15 @@
 	.radio{ background-image: url(img/radio.png);}	
 	.schedulizer{ background-image: url(img/schedulizer.png); }
 	.trace{ background-image: url(img/trace.png); }
-	.uber{ background-image: url(img/uber.png); }
+	.tide{ background-image: url(img/tide.jpg); }
 	.wd40{ background-image: url(img/wd40.png); }
 		.barry, .harley, .kaleb, .krukar, .makeful, .meundies, .radio, .wd40{
 		background-position: center center;
 	}
-	.liquid, .media, .netflix, .schedulizer, .trace, .uber{
+	.liquid, .media, .netflix, .schedulizer, .trace, .tide{
 		background-position: center top;
 	}
-	.barry, .harley, .kaleb, .krukar, .liquid, .makeful, .media, .meundies, .netflix, .radio, .schedulizer, .trace, .uber, .wd40{ 
+	.barry, .harley, .kaleb, .krukar, .liquid, .makeful, .media, .meundies, .netflix, .radio, .schedulizer, .trace, .tide, .wd40{ 
 		background-repeat: no-repeat;
 		background-size: cover;
 		&:hover{

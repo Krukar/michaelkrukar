@@ -1,5 +1,26 @@
 # MichaelKrukar.com Redesign February 2016
 
+## Patch Notes July 30 2016
+RC1
+
+## Patch Notes July 30 2016
+Got a lot done.
+
+Pingdom Report - Pretty URLs implemented
+
+Page size
+762.0 kB
+
+Load time
+412 ms
+
+Faster than
+98 % of tested sites
+
+Requests
+20
+
+
 ##  Patch Notes July 10 2016
 Still have done nothing, but updated page to show some work.
 

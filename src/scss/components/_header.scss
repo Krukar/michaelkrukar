@@ -40,13 +40,25 @@
 			padding: $space/ 1.6;
 
 			color: $white;
+
+			cursor: pointer;
+			@include tran;
 			@include media($medium){
 				padding: 0 $space 0 0;
+			}
+			&:hover{
+				color: $red;
 			}
 			a{
 				color: $white;
 				&:hover{
 					color: $red;
+				}
+			}
+			&.disabled{
+				cursor: auto;
+				&:hover{
+					color: $white;
 				}
 			}
 		}
