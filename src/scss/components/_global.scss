@@ -1,9 +1,15 @@
 body{
 	min-width: 20rem;
-	@include tran(1s);
-	&.fadeOut{
-		opacity: 0;
+	&.fade{
+		animation-name: fade;
+		animation-duration: 1s;		
 	}
+}
+
+@keyframes fade {
+	0% {opacity: 1;}
+	50% {opacity: 0;}
+	100% {opacity: 1;}
 }
 
 a{
@@ -26,7 +32,7 @@ p{
 }
 
 ::selection {
-  background: $red;
+	background: $red;
 }
 
 .container{

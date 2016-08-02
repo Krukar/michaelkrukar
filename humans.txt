@@ -1,0 +1,12 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+	Michael Krukar -- Admin -- @michaelkrukar
+    <name> -- <role> -- <twitter>
+
+# TECHNOLOGY COLOPHON
+
+    CSS3, HTML5
+    Nginx, Javascript, Normalize.css

@@ -171,13 +171,16 @@
 
 	// Toggle what piece is shown
 	function switchKey(key){
-		document.body.classList.add('fadeOut');
+		document.body.classList.add('fade');
 		setTimeout(function(){ 
-			window.scrollTo(0, 0);
 			setKey(key);
+			window.scrollTo(0, 0);
 			window.history.pushState(null, null, key);
-			document.body.classList.remove('fadeOut');
-		}, 1500);
+		}, 500);
+
+		setTimeout(function(){
+			document.body.classList.remove('fade');
+		}, 1000);
 
 	}
 
@@ -186,5 +189,17 @@
 		ga('send', 'event', 'portfolio', 'link', window.location.pathname.substring(1));
 		setKey(window.location.pathname.substring(1));
 	}
+
+	// If someone goes back
+	window.onpopstate = function(event) {
+		if(window.location.pathname !== '/'){
+			setKey(window.location.pathname.substring(1));
+		}		
+		else{
+			document.getElementById('jsMain').classList.toggle('hide');
+		}
+	};
+
+	console.log('scripts.js init')
 
 })();
