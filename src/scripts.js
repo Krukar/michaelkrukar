@@ -50,9 +50,9 @@
 			image: "makeful.jpg",
 			title: "Makeful",
 			category: "Web",
-			info: "<p>Makeful is a DIY community website launched by Blue Ant Media.</p><p>I worked with a back end developer to build the website from scratch. We went with Foundation and Angular since I was comfortable with them. For this project I incorporated Gulp and NPM, a first for the team.</p><p>Our one major requirement was that it be built in Wordpress, which possessed a set of challenges that we managed to overcome.</p>",
+			info: "<p>Makeful is a DIY community website launched by Blue Ant Media.</p><p>This is the second verison of Makeful that I worked on. The original build was done using Wordpress, Angular and Foundation. The current version uses Laravel to handle the backend while the JS was done entirely with jQuery.</p><p>A third iteration is likely.</p>",
 			status: "Online",
-			tools: "HTML, CSS, Javascript, jQuery, Angular, Foundation, PHP, Wordpress, MySQL, Gulp, NPM",
+			tools: "HTML, CSS, Javascript, jQuery, Angular, Foundation, PHP, Wordpress, MySQL, Gulp, NPM, Laravel, Homestead",
 			link: "http://bemakeful.com/"
 		},
 		media:{
@@ -144,29 +144,35 @@
 
 	// Toggle main
 	document.getElementById('jsMainToggle').addEventListener('click', function(){
-		if(document.getElementById('jsTitle').textContent){
-			document.getElementById('jsMain').classList.toggle('hide');
+		if(!this.classList.contains('disabled')){		
+			switchKey();
 		}
 	})
 
 	// Set a piece to be shown
 	function setKey(key){
-		var piece = portfolio[key];
-		document.getElementById('jsImage').src = 'img/' + piece.image;
-		document.getElementById('jsTitle').textContent = piece.title;
-		document.getElementById('jsCategory').textContent = piece.category;
-		document.getElementById('jsInfo').innerHTML = piece.info;
-		document.getElementById('jsStatus').textContent = piece.status
-		document.getElementById('jsTools').textContent = piece.tools;
-		if(piece.link){
-			document.getElementById('jsLink').href = piece.link;
-			document.getElementById('jsLink').classList.remove('hide');
+		if(key){
+			var piece = portfolio[key];
+			document.getElementById('jsImage').src = 'img/' + piece.image;
+			document.getElementById('jsTitle').textContent = piece.title;
+			document.getElementById('jsCategory').textContent = piece.category;
+			document.getElementById('jsInfo').innerHTML = piece.info;
+			document.getElementById('jsStatus').textContent = piece.status
+			document.getElementById('jsTools').textContent = piece.tools;
+			if(piece.link){
+				document.getElementById('jsLink').href = piece.link;
+				document.getElementById('jsLink').classList.remove('hide');
+			}
+			else{
+				document.getElementById('jsLink').classList.add('hide');
+			}
+			document.getElementById('jsMainToggle').classList.remove('disabled');
+			document.getElementById('jsMain').classList.remove('hide');
 		}
 		else{
-			document.getElementById('jsLink').classList.add('hide');
+			document.getElementById('jsMainToggle').classList.add('disabled');
+			document.getElementById('jsMain').classList.add('hide');
 		}
-		document.getElementById('jsMainToggle').classList.remove('disabled');
-		document.getElementById('jsMain').classList.remove('hide');
 	}
 
 	// Toggle what piece is shown
@@ -175,7 +181,12 @@
 		setTimeout(function(){ 
 			setKey(key);
 			window.scrollTo(0, 0);
-			window.history.pushState(null, null, key);
+			if(key){
+				window.history.pushState(null, null, key);
+			}
+			else{
+				window.history.pushState(null, null, '/');
+			}
 		}, 500);
 
 		setTimeout(function(){
@@ -201,5 +212,4 @@
 	};
 
 	console.log('scripts.js init')
-
 })();
