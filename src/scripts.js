@@ -1,4 +1,4 @@
-(function(){	
+(function(){
 	// Portfolio
 	var portfolio = {
 		barry:{
@@ -144,14 +144,15 @@
 
 	// Toggle main
 	document.getElementById('jsMainToggle').addEventListener('click', function(){
-		if(!this.classList.contains('disabled')){		
+		if(!this.classList.contains('disabled')){
 			switchKey();
 		}
 	})
 
 	// Set a piece to be shown
 	function setKey(key){
-		if(key){
+		// If they link to a piece that does not exist ignore it
+		if(portfolio[key]){
 			var piece = portfolio[key];
 			document.getElementById('jsImage').src = 'img/' + piece.image;
 			document.getElementById('jsTitle').textContent = piece.title;
@@ -178,7 +179,7 @@
 	// Toggle what piece is shown
 	function switchKey(key){
 		document.body.classList.add('fade');
-		setTimeout(function(){ 
+		setTimeout(function(){
 			setKey(key);
 			window.scrollTo(0, 0);
 			if(key){
@@ -194,7 +195,6 @@
 		}, 1000);
 
 	}
-
 	// If someone links to a piece
 	if(window.location.pathname !== '/'){
 		ga('send', 'event', 'portfolio', 'link', window.location.pathname.substring(1));
@@ -205,7 +205,7 @@
 	window.onpopstate = function(event) {
 		if(window.location.pathname !== '/'){
 			setKey(window.location.pathname.substring(1));
-		}		
+		}
 		else{
 			document.getElementById('jsMain').classList.toggle('hide');
 		}
