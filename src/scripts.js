@@ -173,6 +173,7 @@
 		else{
 			document.getElementById('jsMainToggle').classList.add('disabled');
 			document.getElementById('jsMain').classList.add('hide');
+			window.history.replaceState(null, null, '/');
 		}
 	}
 
@@ -211,5 +212,5 @@
 		}
 	};
 
-	console.log('scripts.js init')
+	console.log('scripts.js init');
 })();
