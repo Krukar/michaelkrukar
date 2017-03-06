@@ -7,8 +7,7 @@
 			category: "Photography",
 			info: "<p>To commemorate my cosplay I took this photo. I've always wanted to dress up for Fan Expo and in 2015 I did, I went as Barry Dylan from Archer.</p><p>The costume is just a classic red track suit, dyed blonde hair and a tiny amount of makeup to look more cartoony. A few people recognized me, some thought I was the Six Million Dollar man.</p><p>Photo inspired by George Costanza.</p>",
 			status: "Online",
-			tools: "Canon EOS 60D, Canon EF24-70mm f/2.8L USM, Canon Speedlite 430EX II, Adobe Lightroom",
-			link: "img/barry.jpg"
+			tools: "Canon EOS 60D, Canon EF24-70mm f/2.8L USM, Canon Speedlite 430EX II, Adobe Lightroom"
 		},
 		harley:{
 			image: "harley.png",
@@ -16,8 +15,7 @@
 			category: "Art",
 			info: "<p>I could never draw, but I could always steal. If you steal enough things, throw them together and do some actual work then it's your own. They won't question that you stole it. As long as you do some actual work, that's the key.</p><p>Roy Fox Lichtenstein was an American pop artist. During the 1960s, along with Andy Warhol, Jasper Johns, and James Rosenquist among others, he became a leading figure in the new art movement.</p><p>Harley Quinn (Harleen Frances Quinzel) is a fictional character appearing in American comic books published by DC Comics, commonly as an adversary of the superhero Batman and commonly as the Joker's sidekick.</p>",
 			status: "Online",
-			tools: "Adobe Illustrator",
-			link: "img/harley.png"
+			tools: "Adobe Illustrator"
 		},
 		kaleb:{
 			image: "kaleb.png",
@@ -25,8 +23,7 @@
 			category: "Art",
 			info: "<p>For my friend's wedding I wanted to get him a unique gift. I also wanted to pad my portfolio. We're both big fans of Archer so I decided to draw his newborn son Archer style.</p>",
 			status: "Online",
-			tools: "Adobe Illustrator",
-			link: "img/kaleb.png"
+			tools: "Adobe Illustrator"
 		},
 		krukar:{
 			image: "krukar.png",
@@ -34,8 +31,7 @@
 			category: "Art",
 			info: "<p>Adventure Time is one of my favorite cartoons. One day I found a series of Adventure Time comics that had really nice profile drawings of the main cast. So I drew myself in that style.</p><p>I ended up printing this out at 24x36 inches and hanging it on my wall. Every year on my birthday I have my friends sign the background.</p>",
 			status: "Online",
-			tools: "Adobe Illustrator",
-			link: "img/krukar.png"
+			tools: "Adobe Illustrator"
 		},
 		liquid:{
 			image: "liquid.jpg",
@@ -70,8 +66,7 @@
 			category: "Photography",
 			info: "<p>Underwear hanging on a clothes line, so quaint.</p><p>Every month <a href='https://www.meundies.com/' target='_blank'>Meundies</a> releases a pair of underwear with a brand new design. I hung them up in chronological order and had a fun photoshoot.</p><p>Meundies reached out to me, asking if they can use it in their advertising. Now I can claim I'm a professional commercial photographer.</p>",
 			status: "Online",
-			tools: "Canon EOS 60D, Canon EF24-70mm f/2.8L USM, Adobe Lightroom",
-			link: "img/meundies.jpg"
+			tools: "Canon EOS 60D, Canon EF24-70mm f/2.8L USM, Adobe Lightroom"
 		},
 		netflix:{
 			image: "netflix.png",
@@ -211,6 +206,4 @@
 			document.getElementById('jsMain').classList.toggle('hide');
 		}
 	};
-
-	console.log('scripts.js init');
 })();
