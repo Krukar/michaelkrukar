@@ -1,4 +1,21 @@
-# MichaelKrukar.com Redesign February 2016
+# MichaelKrukar.com Version 3 - May 2016
+
+## TODO
+- Create style guide page
+- Add portfolio to krapi
+- All images on S3
+
+
+## BUGS
+- When you load a url it has to animate it
+- When you hide and it goes to 0 blur is 0
+
+## Release History
+
+### v0.0.01
+- Rebuilding my portfolio in React, adding new pieces and implementing best practices
+
+# MichaelKrukar.com Version 2 - July 2016
 
 ## Patch Notes July 30 2016
 RC1
@@ -20,14 +37,13 @@ Faster than
 Requests
 20
 
-
 ##  Patch Notes July 10 2016
 Still have done nothing, but updated page to show some work.
 
 ## Patch Notes February 24 2016
 Begun working on a redesign. Currently nothing done.
 
-# MichaelKrukar.com Redesign May 2014
+# MichaelKrukar.com Version 1 - May 2014
 
 ## Patch Notes May 3rd 2014
 
@@ -38,7 +54,7 @@ To Do
 - Lock text so that they don't scroll (cool but not necessary)
 - Fix fullscreen panelsnap bug or disable fullscreen (don't like disabling fullscreen)
 
-Pingdom Report - Youtube Emebeds	
+Pingdom Report - Youtube Emebeds
 Tested from on May 4 at 17:08:01
 
 Page size

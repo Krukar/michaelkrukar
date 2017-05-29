@@ -1,0 +1,63 @@
+/* ============
+_details.scss
+Details view
+============ */
+.details{
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 2rem;
+  @include medium{
+    flex-direction: row;
+    padding: 4rem 0;
+  }
+  .image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1 0 100%;
+    @include medium{
+      flex: 1 0 50%;
+    }
+    .img{
+      width: 100%;
+    }
+  }
+  .info{
+    flex: 1 0 50%;
+    padding: 2rem;
+    @include medium{
+      padding: 0 2rem;
+    }
+    h2{
+      margin-bottom: 1rem;
+    }
+    p{
+      margin-bottom: 1rem;
+
+      text-align: justify;
+    }
+    .button{
+      display: block;
+      width: 100%;
+      padding: 1rem;
+      border: 0;
+      outline: none;
+
+      background: $black;
+      color: $white;
+
+      font-family: 'Montserrat';
+      font-size: 0.875rem;
+      font-weight: bold;
+      @include letterSpacing;
+      text-transform: uppercase;
+
+      cursor: pointer;
+      @include transitions;
+      &:hover{
+        background: $red;
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+/* ============
+_grid.scss
+Grid view
+============ */
+.grid{
+  position: absolute;
+  top: 0;
+  width: 100%;
+
+  -webkit-filter: url("#blurGrid");
+  filter: url("#blurGrid");
+  .container{
+    @include medium{
+      display: flex;
+      flex: 1 0 auto;
+    }
+    &.column{
+      flex-direction: column;
+    }
+    &:empty{
+      display: none;
+    }
+  }
+}

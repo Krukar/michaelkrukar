@@ -1,0 +1,31 @@
+/* ============
+_global.scss
+Styles that are global
+============ */
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.main{
+  padding-top: 3rem;
+  @include medium{
+    padding-top: 0;
+  }
+  .filter{
+    position: absolute;
+    left: -9999px;
+    height: 0;
+    width: 0;
+  }
+  .wrapper{
+    position: relative;
+    max-width: $maxWidth;
+    margin: 0 auto;
+
+    background: $white;
+  }
+}

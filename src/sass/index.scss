@@ -1,0 +1,30 @@
+/* ============
+index.scss
+Import all modules here
+============ */
+
+/* ============
+Third Party Libs
+============ */
+@import "~normalize.css/normalize.css"; // Normalize CSS across browsers
+@import "~font-awesome/css/font-awesome.css"; // Load font awesome icons
+
+/* ============
+Core Modules
+============ */
+@import "core/variables.scss"; // Site variables
+@import "core/mixins.scss"; // Site mixins
+@import "core/global.scss"; // Site text settings
+@import "core/typography.scss"; // Site text settings
+
+/* ============
+Views
+============ */
+
+/* ============
+Components
+============ */
+@import "components/nav.scss"; // Primary navigation
+@import "components/grid.scss"; // Grid
+@import "components/item.scss"; // Grid item
+@import "components/details.scss"; // Details
