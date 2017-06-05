@@ -5,11 +5,20 @@ Details view
 .details{
   display: flex;
   flex-direction: column;
-  position: fixed;
-  top: 2rem;
+  position: absolute;
   @include medium{
+    position: fixed;
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-width: $maxWidth;
+    margin-left: auto;
+    margin-right: auto;
     flex-direction: row;
-    padding: 4rem 0;
+    padding: 2rem 0;
+  }
+  @include large{
+    padding: 3rem 0 3.5rem;
   }
   .image{
     display: flex;
@@ -20,7 +29,10 @@ Details view
       flex: 1 0 50%;
     }
     .img{
-      width: 100%;
+      max-width: 100%;
+      @include medium{
+        max-height: 80vh;
+      }
     }
   }
   .info{
@@ -28,6 +40,9 @@ Details view
     padding: 2rem;
     @include medium{
       padding: 0 2rem;
+    }
+    @include large{
+      padding: 0 0 0 2rem;
     }
     h2{
       margin-bottom: 1rem;
@@ -52,6 +67,7 @@ Details view
       font-weight: bold;
       @include letterSpacing;
       text-transform: uppercase;
+      text-align: center;
 
       cursor: pointer;
       @include transitions;

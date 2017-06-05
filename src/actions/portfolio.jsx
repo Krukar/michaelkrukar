@@ -45,12 +45,17 @@ export function generate(data){
 }
 
 /* ============
-Convert a json object of objects in to an array sorted by their order: VALUE
+Convert a json object of objects in to an array sorted by an array of keys
 ============ */
 export function convert(data){
-  return Object.values(data).sort((a,b)=>{
-    return a.order - b.order;
-  });
+  let array = [];
+  let order = data.order;
+
+  for(let key of order){
+    array.push(data[key])
+  }
+
+  return array;
 }
 
 /* ============
@@ -58,7 +63,7 @@ Process 10 items at a time
 ============ */
 export function process(chunk){
   return (
-    <div  className="chunk" key={chunk[0].title}>
+    <div className="chunk" key={chunk[0].title}>
       <div className="container">
         <Item data={chunk[0]}></Item>
         <Item data={chunk[1]}></Item>
@@ -67,17 +72,17 @@ export function process(chunk){
         <div className="container column">
           <div className="container">
             <div className="container column">
-              <Item data={chunk[5]}></Item>
-              <Item data={chunk[6]}></Item>
+              <Item data={chunk[2]}></Item>
+              <Item data={chunk[3]}></Item>
             </div>
-            <Item data={chunk[3]}></Item>
+            <Item data={chunk[4]}></Item>
           </div>
           <div className="container">
-            <Item data={chunk[4]}></Item>
+            <Item data={chunk[5]}></Item>
           </div>
         </div>
         <div className="container">
-          <Item data={chunk[2]}></Item>
+          <Item data={chunk[6]}></Item>
         </div>
       </div>
       <div className="container">

@@ -9,29 +9,29 @@ import { TweenMax } from 'gsap';
 // React
 import React, { Component } from 'react';
 
+// Actions
+import * as utilities from 'actions/utilities.jsx';
+
 class Details extends Component{
   constructor(props){
     super(props);
+
+    this.imageLoad = this.imageLoad.bind(this);
   }
 
   componentDidMount(){
-    this.props.animate(this.refs.details.offsetHeight);
+    window.addEventListener('resize', utilities.debounce(() => {
+      this.props.setOffset(this.refs.details.offsetHeight);
+    }, 250));
   }
 
-  shouldComponentUpdate(nextProps, nextState){
-    if(this.props.data === nextProps.data){
-      window.scrollTo(0,0);
-      return false;
-    }
-    return true;
-  }
-
-  componentDidUpdate(){
-    this.props.animate(this.refs.details.offsetHeight);
-  }
-
+  // Details hidden
   componentWillUnmount(){
-    this.props.animate(0);
+    this.props.setOffset(0);
+  }
+
+  imageLoad(){
+    this.props.setOffset(this.refs.details.offsetHeight);
   }
 
   render() {
@@ -44,13 +44,15 @@ class Details extends Component{
     return (
       <div className="details" ref="details">
         <div className="image">
-          <img className="img" src={'/img/' + this.props.data.image} />
+          <img className="img" src={'http://sperg.life/michaelkrukar/' + this.props.data.image} onLoad={this.imageLoad}/>
         </div>
         <div className="info">
           <h1>{this.props.data.title}</h1>
           <h2>{this.props.data.category}</h2>
           {paragraphs}
-          <button className="button" href={this.props.data.link} target="_blank">Click To View</button>
+          {this.props.data.link &&
+            <a className="button" href={this.props.data.link} target="_blank">Click To View</a>
+          }
         </div>
       </div>
     );

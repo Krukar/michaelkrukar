@@ -1,16 +1,15 @@
 # MichaelKrukar.com Version 3 - May 2016
 
 ## TODO
-- Create style guide page
 - Add portfolio to krapi
-- All images on S3
 
 
-## BUGS
-- When you load a url it has to animate it
-- When you hide and it goes to 0 blur is 0
+## KNOWN BUGS
 
 ## Release History
+
+### v3.0.0
+- Finished version 3
 
 ### v0.0.01
 - Rebuilding my portfolio in React, adding new pieces and implementing best practices

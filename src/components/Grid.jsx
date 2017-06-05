@@ -3,60 +3,48 @@
 Grid.jsx
 Collection of portolio pieces
 ============ */
+// Third Party Libraries
+import { TweenMax } from 'gsap';
+
 // React
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 // Actions
 import * as portfolio from 'actions/portfolio.jsx';
 
-// Components
-import Details from 'components/Details.jsx';
-
 class Grid extends Component{
-  constructor(props){
+  constructor(props) {
     super(props);
 
     this.state = {
-      data: undefined
+      offset: 0
     };
-
-    this.animate = this.animate.bind(this);
-    this.details = this.details.bind(this);
   }
 
-  componentWillMount(){
-    portfolio.get().then(portfolio =>{
-      this.setState({
-        data: portfolio
-      });
-    });
-  }
-
-  animate(height){
-    let h = height + window.pageYOffset
-    let blur = h / 100;
-    TweenMax.to(this.refs.blur, 0.125, {attr:{stdDeviation: '0,' + blur}, repeat: 1, yoyo: true});
-    TweenMax.to(this.refs.grid, 0.25, {y: h, ease: Power1.easeOut, onComplete: ()=>{
-      TweenMax.set(this.refs.grid, {y: height})
-    }});
-  }
-
-  details(props){
-    if(!this.state.data){
-      return null;
+  shouldComponentUpdate(nextProps){
+    if(this.props === nextProps){
+      return false;
     }
 
-    return (
-      <Details data={this.state.data[props.match.params.key]} animate={this.animate}></Details>
-    )
+    return true;
+  }
+
+  componentDidUpdate(){
+    let velocity = Math.abs((this.state.offset - this.props.offset) / 100);
+    TweenMax.to(this.refs.grid, 0.25, {y: this.props.offset, ease: Power1.easeOut});
+    TweenMax.to(this.refs.blur, 0.125, {attr:{stdDeviation: '0,' + velocity}, repeat: 1, yoyo: true});
+
+    this.setState({
+      offset: this.props.offset
+    })
   }
 
   render() {
-    let grid = portfolio.generate(this.state.data);
+    let grid = portfolio.generate(this.props.portfolio);
 
     return (
-      <div className="wrapper">
+      <div className="grid" ref="grid">
+        {grid}
         <svg className="filter">
           <defs>
             <filter id="blurGrid">
@@ -64,10 +52,6 @@ class Grid extends Component{
             </filter>
           </defs>
         </svg>
-        <Route path="/:key" component={this.details}/>
-        <div className="grid" ref="grid">
-          {grid}
-        </div>
       </div>
     );
   }

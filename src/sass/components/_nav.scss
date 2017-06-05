@@ -20,9 +20,10 @@ Primary navigation
   font-weight: bold;
   @include letterSpacing;
   text-transform: uppercase;
+  -webkit-backface-visibility: hidden;
   @include medium{
     flex-flow: row;
-    align-items: center;
+    height: 3rem;
   }
   @include large{
     justify-content: center;

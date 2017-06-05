@@ -17,9 +17,9 @@ class Item extends Component{
     }
 
     return (
-      <div className="item" onClick={this.handleClick}>
+      <div className="item">
         <Link to={'/' + this.props.data.key} className="link">
-          <div className="bg" style={{backgroundImage: 'url(/img/' + this.props.data.image + ')'}}></div>
+          <div className="bg" style={{backgroundImage: 'url(http://sperg.life/michaelkrukar/' + this.props.data.image + ')'}}></div>
           <h1>{this.props.data.title}</h1>
           <p>{this.props.data.category}</p>
         </Link>

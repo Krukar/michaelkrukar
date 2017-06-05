@@ -3,9 +3,8 @@ _grid.scss
 Grid view
 ============ */
 .grid{
-  position: absolute;
-  top: 0;
-  width: 100%;
+  max-width: $maxWidth;
+  margin: 0 auto;
 
   -webkit-filter: url("#blurGrid");
   filter: url("#blurGrid");
