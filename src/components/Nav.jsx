@@ -47,7 +47,7 @@ class Nav extends Component{
             </filter>
           </defs>
         </svg>
-        <Link className="link" to="/">Krukar</Link>
+        <Link className="link home" to="/">Krukar</Link>
         <a className="link" href="mailto:mail@michaelkrukar.com"><i className="fa fa-envelope" aria-hidden="true"></i><span className="text">Mail@michaelkrukar.com</span></a>
         <a className="link" href="https://ca.linkedin.com/in/krukar" target="_blank"><i className="fa fa-linkedin" aria-hidden="true"></i><span className="text">Linkedin</span></a>
         <a className="link" href="https://github.com/Krukar" target="_blank"><i className="fa fa-github" aria-hidden="true"></i><span className="text">Github</span></a>

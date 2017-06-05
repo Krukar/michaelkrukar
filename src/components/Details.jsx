@@ -21,7 +21,8 @@ class Details extends Component{
 
   componentDidMount(){
     window.addEventListener('resize', utilities.debounce(() => {
-      this.props.setOffset(this.refs.details.offsetHeight);
+      let height = this.refs.details ? this.refs.details.offsetHeight : 0;
+      this.props.setOffset(height);
     }, 250));
   }
 

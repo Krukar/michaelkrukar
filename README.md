@@ -3,10 +3,12 @@
 ## TODO
 - Add portfolio to krapi
 
-
 ## KNOWN BUGS
 
 ## Release History
+
+### v3.0.1
+- Added analyitcs, fixed a resizer bug and optimized the UX of mobile menu
 
 ### v3.0.0
 - Finished version 3

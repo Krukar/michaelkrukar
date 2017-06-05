@@ -49,6 +49,12 @@ Primary navigation
     &:hover{
       color: $red;
     }
+    &.home{
+      display: none;
+      @include medium{
+        display: block;
+      }
+    }
     &.menu{
       margin: 0;
       @include medium{
