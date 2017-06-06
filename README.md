@@ -7,6 +7,9 @@
 
 ## Release History
 
+### v3.0.3
+- Moved analytics to head, made a better favicon
+
 ### v3.0.1
 - Added analyitcs, fixed a resizer bug and optimized the UX of mobile menu
 
