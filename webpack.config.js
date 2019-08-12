@@ -1,42 +1,45 @@
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const path = require('path');
 
 module.exports = {
-  entry: './src/index.jsx',
-  output: {
-    path: __dirname + '/public',
-    filename: 'app.js'
-  },
-  resolve:{
-    modules: ['node_modules', './src']
-  },
-  module: {
-    rules:[
-      {
-        test: /\.jsx?$/,
-        exclude: /node_modules/,
-        use:[
-          { loader: 'babel-loader' },
+    entry: './src/entry.js',
+    output: {
+        filename: 'entry.js',
+        path: path.resolve(__dirname, 'public/js')
+    },
+    resolve: {
+        alias: {
+            SCSS: path.resolve('src/scss'),
+            Utilities: path.resolve('src/js/utilities/index.js')
+        },
+        extensions: ['.js', '.scss']
+    },
+    module: {
+        rules: [{
+                test: /\.(js)?$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['@babel/preset-env']
+                    }
+                }
+            },
+            {
+                test: /\.scss$/,
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    "css-loader",
+                    "sass-loader"
+                ]
+            }
         ]
-      },
-      {
-        test: /\.(scss|css)$/,
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: [
-            { loader: 'css-loader' },
-            { loader: 'sass-loader' }
-          ]
-        })
-      },
-      {
-        test: /\.(ttf|eot|svg|woff|woff2)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-        use:[
-          { loader: 'file-loader?name=[name].[ext]&outputPath=css/fonts/&publicPath=/' }
-        ]
-      }
-    ]
-  },
-  plugins: [
-    new ExtractTextPlugin('css/style.css'),
-  ]
-}
+    },
+    plugins: [
+        new MiniCssExtractPlugin({
+            filename: '../css/styles.css',
+            chunkFilename: '[id].css',
+            ignoreOrder: false,
+        }),
+    ],
+};

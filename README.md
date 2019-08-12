@@ -1,11 +1,11 @@
-# MichaelKrukar.com Version 3 - May 2016
-
-## TODO
-- Add portfolio to krapi
+# MichaelKrukar.com Version 3 - August 2019
 
 ## KNOWN BUGS
 
 ## Release History
+
+### v4.0.0
+- Created new portfolio in P5
 
 ### v3.0.3
 - Moved analytics to head, made a better favicon
