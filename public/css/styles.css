@@ -452,3 +452,11 @@ a:hover {
 p a:hover {
   border-bottom: solid thin #eb0029; }
 
+/* ============
+Components
+============ */
+#mountains {
+  max-height: 100vh;
+  max-width: 100vw;
+  overflow: hidden; }
+

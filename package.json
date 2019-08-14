@@ -29,6 +29,7 @@
     "webpack-cli": "^3.3.6"
   },
   "dependencies": {
-    "normalize.css": "^8.0.1"
+    "normalize.css": "^8.0.1",
+    "three-stl-loader": "^1.0.6"
   }
 }
