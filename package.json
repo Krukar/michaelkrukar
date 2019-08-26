@@ -1,7 +1,7 @@
 {
-  "name": "krukar-skeleton",
-  "version": "0.1.0",
-  "description": "2019 HTML Starter Page",
+  "name": "michaelkrukar.com",
+  "version": "0.4.0",
+  "description": "Personal portfolio of Michael Krukar",
   "engines": {
     "node": ">=10.16.0"
   },
@@ -11,11 +11,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Krukar/krukar-skeleton.git"
+    "url": "git+https://github.com/Krukar/michaelkrukar.com.git"
   },
   "author": "Michael Krukar <mail@michaelkrukar.com> (http://michaelkrukar.com/)",
   "license": "MIT",
-  "homepage": "https://github.com/Krukar/krukar-skeleton#readme",
+  "homepage": "https://github.com/Krukar/michaelkrukar.com#readme",
   "devDependencies": {
     "@babel/core": "^7.5.5",
     "@babel/plugin-proposal-class-properties": "^7.5.5",

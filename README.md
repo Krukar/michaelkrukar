@@ -5,7 +5,7 @@
 ## Release History
 
 ### v4.0.0
-- Created new portfolio in P5
+- Created new portfolio in Three.js
 
 ### v3.0.3
 - Moved analytics to head, made a better favicon
