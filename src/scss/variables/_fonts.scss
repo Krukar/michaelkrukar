@@ -1,4 +1,24 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:700|Roboto:400,400i,700');
+@font-face {
+    font-family: 'Brandon';
+    src: url('fonts/br-medium-webfont.woff');
+}
 
-$roboto-font-family: 'Roboto', sans-serif;
-$roboto-slab-font-family: 'Roboto Slab', serif;
+$bootstrap-font-family: // Safari for macOS and iOS (San Francisco)
+-apple-system,
+// Chrome < 56 for macOS (San Francisco)
+BlinkMacSystemFont,
+// Windows
+"Segoe UI",
+// Android
+"Roboto",
+// Basic web fallback
+"Helvetica Neue",
+Arial,
+sans-serif,
+// Emoji fonts
+"Apple Color Emoji",
+"Segoe UI Emoji",
+"Segoe UI Symbol" !default;
+
+$brandon-font-family: 'Brandon',
+sans-serif;

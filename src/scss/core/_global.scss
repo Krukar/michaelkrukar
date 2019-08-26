@@ -1,0 +1,42 @@
+/* ============
+Body
+============ */
+
+body {
+  background: $black;
+
+  font-family: $body-font-family;
+  font-size: rem($default-font-size);
+}
+
+/* ============
+Paragraphs and Anchors
+============ */
+
+a {
+  margin-bottom: rem(8);
+
+  color: $white;
+
+  text-decoration: none;
+
+  font-family: $header-font-family;
+  font-size: rem(32);
+
+  letter-spacing: rem(1);
+
+  @include transition;
+}
+
+a:focus,
+a:hover {
+  color: $brand;
+}
+
+a:focus {
+  outline: solid thin $brand;
+}
+
+.red {
+  color: $brand;
+}

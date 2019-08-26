@@ -19,20 +19,35 @@ module.exports = {
         rules: [{
                 test: /\.(js)?$/,
                 exclude: /node_modules/,
-                use: {
-                    loader: 'babel-loader',
-                    options: {
-                        presets: ['@babel/preset-env']
-                    }
-                }
+                use: ['babel-loader', 'eslint-loader']
             },
             {
                 test: /\.scss$/,
                 use: [
                     MiniCssExtractPlugin.loader,
-                    "css-loader",
-                    "sass-loader"
+                    'css-loader',
+                    'sass-loader'
                 ]
+            },
+            {
+                test: /\.(jpg|png)?$/,
+                use: [{
+                    loader: 'file-loader',
+                    options: {
+                        name: '[name].[ext]',
+                        outputPath: '../img'
+                    }
+                }]
+            },
+            {
+                test: /\.(woff)?$/,
+                use: [{
+                    loader: 'file-loader',
+                    options: {
+                        name: '[name].[ext]',
+                        outputPath: '../css'
+                    }
+                }]
             }
         ]
     },
@@ -40,7 +55,7 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: '../css/styles.css',
             chunkFilename: '[id].css',
-            ignoreOrder: false,
-        }),
-    ],
+            ignoreOrder: false
+        })
+    ]
 };

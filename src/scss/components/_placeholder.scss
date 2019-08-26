@@ -1,0 +1,21 @@
+.placeholder {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 100vh;
+    width: 100vw;
+
+    z-index: 5;
+
+    @include background-cover;
+    background-image: url("../img/mountains.png");
+
+    @include transition(opacity, $animation-speed-medium);
+
+    &--hidden {
+        opacity: 0;
+    }
+}

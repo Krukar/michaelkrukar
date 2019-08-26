@@ -1,4 +1,3 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:700|Roboto:400,400i,700);
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
@@ -372,6 +371,10 @@ Brand
 /* ============
 UI
 ============ */
+@font-face {
+  font-family: 'Brandon';
+  src: url(../css/br-medium-webfont.woff); }
+
 /* ============
 rem()
 Converts px value to rem
@@ -395,11 +398,34 @@ Core Modules
 Body
 ============ */
 body {
-  font-family: "Roboto", sans-serif;
+  background: black;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 1rem; }
 
 /* ============
-Headers
+Paragraphs and Anchors
+============ */
+a {
+  margin-bottom: 0.5rem;
+  color: white;
+  text-decoration: none;
+  font-family: "Brandon", sans-serif;
+  font-size: 2rem;
+  letter-spacing: 0.0625rem;
+  transition: all 0.25s cubic-bezier(0, 0, 0.5, 1); }
+
+a:focus,
+a:hover {
+  color: #eb0029; }
+
+a:focus {
+  outline: solid thin #eb0029; }
+
+.red {
+  color: #eb0029; }
+
+/* ============
+Headings
 ============ */
 h1,
 h2,
@@ -409,54 +435,85 @@ h5,
 h6 {
   margin: 0 0 1rem;
   color: black;
-  font-family: "Roboto Slab", serif;
+  font-family: "Brandon", sans-serif;
   line-height: 1; }
 
 h1 {
-  font-size: 1.875rem; }
-
-h2 {
-  font-size: 1.5rem; }
-
-h3 {
-  font-size: 1.25rem; }
-
-h4 {
-  font-size: 1.125rem; }
-
-h5 {
-  font-size: 1rem; }
-
-h6 {
-  font-size: 0.875rem; }
-
-/* ============
-Paragraphs and Anchors
-============ */
-a {
-  color: black;
-  text-decoration: none;
-  transition: all 0.25s cubic-bezier(0, 0, 0.5, 1); }
-
-p {
-  margin: 0 0 1rem;
-  font-size: 1rem;
-  line-height: 1.5; }
-  p a {
-    border-bottom: solid thin rgba(0, 0, 0, 0);
-    color: #eb0029; }
-
-a:hover {
-  color: #eb0029; }
-
-p a:hover {
-  border-bottom: solid thin #eb0029; }
+  font-size: 2rem;
+  letter-spacing: 0.25em; }
+  @media (min-width: 1200px) {
+    h1 {
+      font-size: 4rem; } }
+  @media (min-width: 1920px) {
+    h1 {
+      font-size: 6rem; } }
+  @media (min-width: 2560px) {
+    h1 {
+      font-size: 8rem; } }
 
 /* ============
 Components
 ============ */
-#mountains {
+/* ============
+Components
+============ */
+.mountains {
   max-height: 100vh;
   max-width: 100vw;
-  overflow: hidden; }
+  overflow: hidden;
+  transition: all 0.25s cubic-bezier(0, 0, 0.5, 1); }
+
+.placeholder {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 5;
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat-x: no-repeat;
+  background-repeat-y: no-repeat;
+  background-size: cover;
+  background-image: url(../img/mountains.png);
+  transition: opacity 0.5s cubic-bezier(0, 0, 0.5, 1); }
+  .placeholder--hidden {
+    opacity: 0; }
+
+.section {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 10;
+  display: flex;
+  justify-content: center; }
+  .section .container {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
+    opacity: 0;
+    animation: fade-out 5s cubic-bezier(0, 0, 0.5, 1);
+    transition: all 0.25s cubic-bezier(0, 0, 0.5, 1); }
+    .section .container:focus-within, .section .container:hover {
+      opacity: 1; }
+
+@keyframes fade-out {
+  0% {
+    opacity: 1; }
+  75% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+.title {
+  color: white;
+  text-align: center;
+  text-transform: uppercase; }
 
