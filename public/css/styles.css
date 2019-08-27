@@ -373,6 +373,7 @@ UI
 ============ */
 @font-face {
   font-family: 'Brandon';
+  font-display: auto;
   src: url(../css/br-medium-webfont.woff); }
 
 /* ============
@@ -412,11 +413,12 @@ a {
   font-family: "Brandon", sans-serif;
   font-size: 2rem;
   letter-spacing: 0.0625rem;
+  opacity: 0.5;
   transition: all 0.25s cubic-bezier(0, 0, 0.5, 1); }
 
 a:focus,
 a:hover {
-  color: #eb0029; }
+  opacity: 1; }
 
 a:focus {
   outline: solid thin #eb0029; }
@@ -461,26 +463,10 @@ Components
   max-height: 100vh;
   max-width: 100vw;
   overflow: hidden;
-  transition: all 0.25s cubic-bezier(0, 0, 0.5, 1); }
-
-.placeholder {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 100vh;
-  width: 100vw;
-  z-index: 5;
-  background-position-x: center;
-  background-position-y: center;
-  background-repeat-x: no-repeat;
-  background-repeat-y: no-repeat;
-  background-size: cover;
-  background-image: url(../img/mountains.png);
-  transition: opacity 0.5s cubic-bezier(0, 0, 0.5, 1); }
-  .placeholder--hidden {
-    opacity: 0; }
+  opacity: 0;
+  transition: opacity 0.75s cubic-bezier(0, 0, 0.5, 1); }
+  .mountains--loaded {
+    opacity: 1; }
 
 .section {
   position: fixed;
@@ -500,7 +486,7 @@ Components
     align-items: center;
     opacity: 0;
     animation: fade-out 5s cubic-bezier(0, 0, 0.5, 1);
-    transition: all 0.25s cubic-bezier(0, 0, 0.5, 1); }
+    transition: all 0.75s cubic-bezier(0, 0, 0.5, 1); }
     .section .container:focus-within, .section .container:hover {
       opacity: 1; }
 

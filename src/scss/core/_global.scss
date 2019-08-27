@@ -25,12 +25,14 @@ a {
 
   letter-spacing: rem(1);
 
+  opacity: 0.5;
+
   @include transition;
 }
 
 a:focus,
 a:hover {
-  color: $brand;
+  opacity: 1;
 }
 
 a:focus {

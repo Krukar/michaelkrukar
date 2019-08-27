@@ -7,7 +7,6 @@ class Mountains {
         this.settings = {
             black: 'rgb(0,0,0)',
             element: document.getElementById('js-mountains'),
-            placeholder: document.getElementById('js-placeholder'),
             red: 'rgb(235, 0, 41)',
             speed: 1
         };
@@ -74,11 +73,10 @@ class Mountains {
             // Render the initial scene
             this.renderer.render(this.scene, this.camera);
 
-            // Hide the placeholder
-            this.settings.placeholder.classList.add('placeholder--hidden');
+            // Fade in the mountains
+            this.settings.element.classList.add('mountains--loaded');
 
-            // Wait 1 second before animating, this allows the placeholder to fade out gradually before the animation starts
-            setTimeout(() => this.animate(), 250);
+            this.animate();
         });
     }
 }

@@ -22,7 +22,7 @@
 
         animation: fade-out 5s $cubic-bezier;
 
-        @include transition;
+        @include transition(all, $animation-speed-slow);
 
         &:focus-within,
         &:hover {

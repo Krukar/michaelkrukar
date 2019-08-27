@@ -3,5 +3,11 @@
     max-width: 100vw;
     overflow: hidden;
 
-    @include transition;
+    opacity: 0;
+
+    @include transition(opacity, $animation-speed-slow);
+
+    &--loaded {
+        opacity: 1;
+    }
 }
