@@ -6,6 +6,9 @@ TO DO: Add google analytics
 
 ## Release History
 
+### v4.0.1
+- Modified tags and minified css
+
 ### v4.0.0
 - Created new portfolio in Three.js
 
