@@ -16,9 +16,15 @@ h6 {
 }
 
 h1 {
-  font-size: rem($default-font-size * 2); // 32
+  font-size: rem($default-font-size * 1); // 16
 
   letter-spacing: 0.25em;
+
+  white-space: nowrap;
+
+  @include small {
+    font-size: rem($default-font-size * 2); // 32
+  }
 
   @include medium {
     font-size: rem($default-font-size * 4); // 64
@@ -26,9 +32,5 @@ h1 {
 
   @include large {
     font-size: rem($default-font-size * 6); // 96
-  }
-
-  @include xlarge {
-    font-size: rem($default-font-size * 8); // 128
   }
 }

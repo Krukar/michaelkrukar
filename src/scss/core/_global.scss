@@ -21,13 +21,17 @@ a {
   text-decoration: none;
 
   font-family: $header-font-family;
-  font-size: rem(32);
+  font-size: rem(16);
 
   letter-spacing: rem(1);
 
   opacity: 0.5;
 
   @include transition;
+
+  @include small {
+    font-size: rem($default-font-size * 2); // 32
+  }
 }
 
 a:focus,
@@ -40,5 +44,10 @@ a:focus {
 }
 
 .red {
+  color: $brand;
+}
+
+::selection {
+  background-color: $black;
   color: $brand;
 }

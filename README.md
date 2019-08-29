@@ -2,6 +2,8 @@
 
 ## KNOWN BUGS
 
+TO DO: Add google analytics
+
 ## Release History
 
 ### v4.0.0

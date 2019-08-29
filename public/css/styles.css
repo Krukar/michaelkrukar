@@ -410,10 +410,13 @@ a {
   color: white;
   text-decoration: none;
   font-family: "Brandon", sans-serif;
-  font-size: 2rem;
+  font-size: 1rem;
   letter-spacing: 0.0625rem;
   opacity: 0.5;
   transition: all 0.25s cubic-bezier(0, 0, 0.5, 1); }
+  @media (min-width: 540px) {
+    a {
+      font-size: 2rem; } }
 
 a:focus,
 a:hover {
@@ -423,6 +426,10 @@ a:focus {
   outline: solid thin #eb0029; }
 
 .red {
+  color: #eb0029; }
+
+::selection {
+  background-color: black;
   color: #eb0029; }
 
 /* ============
@@ -440,17 +447,18 @@ h6 {
   line-height: 1; }
 
 h1 {
-  font-size: 2rem;
-  letter-spacing: 0.25em; }
-  @media (min-width: 1200px) {
+  font-size: 1rem;
+  letter-spacing: 0.25em;
+  white-space: nowrap; }
+  @media (min-width: 540px) {
+    h1 {
+      font-size: 2rem; } }
+  @media (min-width: 920px) {
     h1 {
       font-size: 4rem; } }
-  @media (min-width: 1920px) {
+  @media (min-width: 1400px) {
     h1 {
       font-size: 6rem; } }
-  @media (min-width: 2560px) {
-    h1 {
-      font-size: 8rem; } }
 
 /* ============
 Components
@@ -469,33 +477,19 @@ Components
 
 .section {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 100vh;
-  width: 100vw;
+  top: 50%;
+  left: 50%;
   z-index: 10;
   display: flex;
-  justify-content: center; }
-  .section .container {
-    display: flex;
-    flex-direction: column;
-    align-self: center;
-    align-items: center;
-    opacity: 0;
-    animation: fade-out 5s cubic-bezier(0, 0, 0.5, 1);
-    transition: all 0.75s cubic-bezier(0, 0, 0.5, 1); }
-    .section .container:focus-within, .section .container:hover {
-      opacity: 1; }
-
-@keyframes fade-out {
-  0% {
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transform: translate(-50%, -50%);
+  transition: all 0.25s cubic-bezier(0, 0, 0.5, 1); }
+  .section:hover {
     opacity: 1; }
-  75% {
-    opacity: 1; }
-  100% {
-    opacity: 0; } }
+  .section--hidden {
+    opacity: 0; }
 
 .title {
   color: white;
